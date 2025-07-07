@@ -1,0 +1,668 @@
+2025-06-26 10:06:39,972 - __main__ - INFO - 🚀 启动极简版本专业织机识别图像生成器
+2025-06-26 10:06:39,972 - __main__ - INFO - 📊 基于科学对比分析，极简版本具有最佳的结构保持性能
+2025-06-26 10:06:39,972 - __main__ - INFO - ⚡ 结构相似性: 0.698 | 处理速度: ~19秒 | 文件大小: 0.62MB
+2025-06-26 10:06:39,972 - __main__ - INFO - 📁 工作目录: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend
+2025-06-26 10:20:36,969 - __main__ - INFO - 🚀 启动极简版本专业织机识别图像生成器
+2025-06-26 10:20:36,969 - __main__ - INFO - 📊 基于科学对比分析，极简版本具有最佳的结构保持性能
+2025-06-26 10:20:36,969 - __main__ - INFO - ⚡ 结构相似性: 0.698 | 处理速度: ~19秒 | 文件大小: 0.62MB
+2025-06-26 10:20:36,969 - __main__ - INFO - 📁 工作目录: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend
+2025-06-26 10:20:40,394 - main - INFO - 目录已准备: uploads
+2025-06-26 10:20:40,396 - main - INFO - 目录已准备: outputs
+2025-06-26 10:20:40,396 - main - INFO - 系统初始化完成
+2025-06-26 10:20:40,396 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 10:20:40,397 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 10:20:40,399 - main - INFO - ✅ 成功恢复 6 个任务状态
+2025-06-26 10:20:40,426 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 10:20:40,470 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:27:36,355 - main - INFO - 接收文件上传请求: 3d01b140c658c877c8436edec0990f3b.jpg
+2025-06-26 10:27:36,357 - main - INFO - 文件上传成功: uploads/250626_102736.jpg (460400 bytes)
+2025-06-26 10:27:36,456 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:29:26,017 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 10:32:21,960 - __main__ - INFO - 🚀 启动极简版本专业织机识别图像生成器
+2025-06-26 10:32:21,960 - __main__ - INFO - 📊 基于科学对比分析，极简版本具有最佳的结构保持性能
+2025-06-26 10:32:21,960 - __main__ - INFO - ⚡ 结构相似性: 0.698 | 处理速度: ~19秒 | 文件大小: 0.62MB
+2025-06-26 10:32:21,960 - __main__ - INFO - 📁 工作目录: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend
+2025-06-26 10:32:23,701 - main - INFO - 目录已准备: uploads
+2025-06-26 10:32:23,701 - main - INFO - 目录已准备: outputs
+2025-06-26 10:32:23,701 - main - INFO - 系统初始化完成
+2025-06-26 10:32:23,701 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 10:32:23,701 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 10:32:23,702 - main - INFO - ✅ 成功恢复 6 个任务状态
+2025-06-26 10:32:23,713 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 10:32:23,819 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:32:31,446 - main - INFO - 文件已保存: uploads/250626_103231.jpg
+2025-06-26 10:32:31,458 - simple_professional_generator - INFO - 原图尺寸: (800, 800, 3)
+2025-06-26 10:32:31,458 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 10:32:31,460 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 10:32:31,518 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:32:38,020 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 10:32:38,161 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 10:32:38,197 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 10:32:38,200 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 10:32:38,316 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:32:39,534 - simple_professional_generator - INFO - 图像已保存: outputs/250626_103231/250626_103231_simple_professional.png (0.62 MB)
+2025-06-26 10:32:39,614 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:32:41,524 - simple_professional_generator - INFO - 图像已保存: outputs/250626_103231/250626_103231_simple_comparison.png (1.62 MB)
+2025-06-26 10:32:41,524 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 10.08秒
+2025-06-26 10:32:41,525 - main - INFO - 图像处理完成，耗时: 10.08秒
+2025-06-26 10:32:41,598 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:34:27,320 - main - INFO - 接收文件上传请求: 3d01b140c658c877c8436edec0990f3b.jpg
+2025-06-26 10:34:27,321 - main - INFO - 文件上传成功: uploads/250626_103427.jpg (460400 bytes)
+2025-06-26 10:34:27,479 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:35:47,338 - main - INFO - 文件已保存: uploads/250626_103547.jpg
+2025-06-26 10:35:47,348 - simple_professional_generator - INFO - 原图尺寸: (800, 800, 3)
+2025-06-26 10:35:47,348 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 10:35:47,351 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 10:35:47,433 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:35:57,037 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 10:35:57,262 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 10:35:57,305 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 10:35:57,310 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 10:35:57,410 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:35:59,061 - simple_professional_generator - INFO - 图像已保存: outputs/250626_103547/250626_103547_simple_professional.png (0.62 MB)
+2025-06-26 10:35:59,162 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:36:02,203 - simple_professional_generator - INFO - 图像已保存: outputs/250626_103547/250626_103547_simple_comparison.png (1.62 MB)
+2025-06-26 10:36:02,203 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 14.86秒
+2025-06-26 10:36:02,205 - main - INFO - 图像处理完成，耗时: 14.86秒
+2025-06-26 10:36:02,304 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:36:08,128 - main - INFO - 文件已保存: uploads/250626_103608.jpg
+2025-06-26 10:36:08,140 - simple_professional_generator - INFO - 原图尺寸: (800, 800, 3)
+2025-06-26 10:36:08,141 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 10:36:08,143 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 10:36:08,230 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:36:17,909 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 10:36:18,154 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 10:36:18,200 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 10:36:18,204 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 10:36:18,313 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:36:19,971 - simple_professional_generator - INFO - 图像已保存: outputs/250626_103608/250626_103608_simple_professional.png (0.62 MB)
+2025-06-26 10:36:20,079 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:36:22,772 - simple_professional_generator - INFO - 图像已保存: outputs/250626_103608/250626_103608_simple_comparison.png (1.62 MB)
+2025-06-26 10:36:22,773 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 14.64秒
+2025-06-26 10:36:22,776 - main - INFO - 图像处理完成，耗时: 14.64秒
+2025-06-26 10:36:22,857 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:38:25,670 - main - INFO - 文件已保存: uploads/250626_103825.jpg
+2025-06-26 10:38:25,682 - simple_professional_generator - INFO - 原图尺寸: (800, 800, 3)
+2025-06-26 10:38:25,682 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 10:38:25,685 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 10:38:25,775 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:38:35,206 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 10:38:35,403 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 10:38:35,450 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 10:38:35,454 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 10:38:35,551 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:38:37,444 - simple_professional_generator - INFO - 图像已保存: outputs/250626_103825/250626_103825_simple_professional.png (0.62 MB)
+2025-06-26 10:38:37,544 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:38:40,236 - simple_professional_generator - INFO - 图像已保存: outputs/250626_103825/250626_103825_simple_comparison.png (1.62 MB)
+2025-06-26 10:38:40,237 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 14.57秒
+2025-06-26 10:38:40,239 - main - INFO - 图像处理完成，耗时: 14.57秒
+2025-06-26 10:38:40,340 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:40:19,582 - main - INFO - 文件已保存: uploads/250626_104019.jpg
+2025-06-26 10:40:19,595 - simple_professional_generator - INFO - 原图尺寸: (800, 800, 3)
+2025-06-26 10:40:19,595 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 10:40:19,597 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 10:40:19,693 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:40:29,206 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 10:40:29,409 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 10:40:29,458 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 10:40:29,464 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 10:40:29,571 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:40:31,373 - simple_professional_generator - INFO - 图像已保存: outputs/250626_104019/250626_104019_simple_professional.png (0.62 MB)
+2025-06-26 10:40:31,459 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:40:34,485 - simple_professional_generator - INFO - 图像已保存: outputs/250626_104019/250626_104019_simple_comparison.png (1.62 MB)
+2025-06-26 10:40:34,486 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 14.90秒
+2025-06-26 10:40:34,486 - main - INFO - 图像处理完成，耗时: 14.90秒
+2025-06-26 10:40:34,572 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:41:43,613 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:41:43,763 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 10:41:44,530 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 10:41:46,819 - main - INFO - 目录已准备: uploads
+2025-06-26 10:41:46,819 - main - INFO - 目录已准备: outputs
+2025-06-26 10:41:46,819 - main - INFO - 系统初始化完成
+2025-06-26 10:41:46,820 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 10:41:46,820 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 10:41:46,822 - main - INFO - ✅ 成功恢复 11 个任务状态
+2025-06-26 10:41:46,838 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 10:41:46,919 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:42:00,131 - main - INFO - 接收文件上传请求: 3d01b140c658c877c8436edec0990f3b.jpg
+2025-06-26 10:42:00,133 - main - INFO - 文件上传成功: uploads/250626_104200.jpg (460400 bytes)
+2025-06-26 10:42:00,214 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:42:03,899 - main - INFO - 文件已保存: uploads/250626_104203.jpg
+2025-06-26 10:42:03,900 - main - ERROR - 图像处理失败: 极简专业图像生成失败: 无法加载图像: uploads/250626_104203.jpg
+2025-06-26 10:42:03,973 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:42:10,868 - main - INFO - 文件已保存: uploads/250626_104210.jpg
+2025-06-26 10:42:10,868 - main - ERROR - 图像处理失败: 极简专业图像生成失败: 无法加载图像: uploads/250626_104210.jpg
+2025-06-26 10:42:10,927 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:42:12,404 - main - INFO - 文件已保存: uploads/250626_104212.jpg
+2025-06-26 10:42:12,404 - main - ERROR - 图像处理失败: 极简专业图像生成失败: 无法加载图像: uploads/250626_104212.jpg
+2025-06-26 10:42:12,531 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:42:13,264 - main - INFO - 文件已保存: uploads/250626_104213.jpg
+2025-06-26 10:42:13,264 - main - ERROR - 图像处理失败: 极简专业图像生成失败: 无法加载图像: uploads/250626_104213.jpg
+2025-06-26 10:42:13,326 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:42:13,760 - main - INFO - 文件已保存: uploads/250626_104213.jpg
+2025-06-26 10:42:13,760 - main - ERROR - 图像处理失败: 极简专业图像生成失败: 无法加载图像: uploads/250626_104213.jpg
+2025-06-26 10:42:13,842 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:42:14,078 - main - INFO - 文件已保存: uploads/250626_104214.jpg
+2025-06-26 10:42:14,078 - main - ERROR - 图像处理失败: 极简专业图像生成失败: 无法加载图像: uploads/250626_104214.jpg
+2025-06-26 10:42:14,196 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:42:14,388 - main - INFO - 文件已保存: uploads/250626_104214.jpg
+2025-06-26 10:42:14,388 - main - ERROR - 图像处理失败: 极简专业图像生成失败: 无法加载图像: uploads/250626_104214.jpg
+2025-06-26 10:42:14,558 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:42:14,684 - main - INFO - 文件已保存: uploads/250626_104214.jpg
+2025-06-26 10:42:14,684 - main - ERROR - 图像处理失败: 极简专业图像生成失败: 无法加载图像: uploads/250626_104214.jpg
+2025-06-26 10:42:14,918 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:42:14,976 - main - INFO - 文件已保存: uploads/250626_104214.jpg
+2025-06-26 10:42:14,976 - main - ERROR - 图像处理失败: 极简专业图像生成失败: 无法加载图像: uploads/250626_104214.jpg
+2025-06-26 10:42:15,282 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:42:15,348 - main - INFO - 文件已保存: uploads/250626_104215.jpg
+2025-06-26 10:42:15,348 - main - ERROR - 图像处理失败: 极简专业图像生成失败: 无法加载图像: uploads/250626_104215.jpg
+2025-06-26 10:42:15,470 - main - INFO - 文件已保存: uploads/250626_104215.jpg
+2025-06-26 10:42:15,470 - main - ERROR - 图像处理失败: 极简专业图像生成失败: 无法加载图像: uploads/250626_104215.jpg
+2025-06-26 10:42:15,641 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:43:27,846 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:43:27,966 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 10:43:29,029 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:43:31,891 - main - INFO - 目录已准备: uploads
+2025-06-26 10:43:31,891 - main - INFO - 目录已准备: outputs
+2025-06-26 10:43:31,891 - main - INFO - 系统初始化完成
+2025-06-26 10:43:31,891 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 10:43:31,892 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 10:43:31,894 - main - INFO - ✅ 成功恢复 11 个任务状态
+2025-06-26 10:43:31,912 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 10:43:31,973 - watchfiles.main - INFO - 5 changes detected
+2025-06-26 10:44:32,564 - watchfiles.main - INFO - 8 changes detected
+2025-06-26 10:45:07,474 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:45:07,634 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 10:45:11,446 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:45:14,310 - main - INFO - 目录已准备: uploads
+2025-06-26 10:45:14,311 - main - INFO - 目录已准备: outputs
+2025-06-26 10:45:14,311 - main - INFO - 系统初始化完成
+2025-06-26 10:45:14,312 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 10:45:14,312 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 10:45:14,315 - main - INFO - ✅ 成功恢复 11 个任务状态
+2025-06-26 10:45:14,339 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 10:45:14,395 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:45:18,702 - main - INFO - 文件已保存: uploads/250626_104518.jpg
+2025-06-26 10:45:18,702 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_104518.jpg
+2025-06-26 10:45:18,702 - simple_professional_generator - INFO - 图像文件大小: 5774 bytes
+2025-06-26 10:45:18,706 - simple_professional_generator - INFO - 原图尺寸: (300, 400, 3)
+2025-06-26 10:45:18,706 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 10:45:18,707 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 10:45:18,779 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:45:20,329 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 10:45:20,379 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 10:45:20,385 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 10:45:20,388 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 10:45:20,416 - simple_professional_generator - INFO - 图像已保存: outputs/250626_104518/250626_104518_simple_professional.png (0.00 MB)
+2025-06-26 10:45:20,446 - simple_professional_generator - INFO - 图像已保存: outputs/250626_104518/250626_104518_simple_comparison.png (0.00 MB)
+2025-06-26 10:45:20,446 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 1.74秒
+2025-06-26 10:45:20,446 - main - INFO - 图像处理完成，耗时: 1.74秒
+2025-06-26 10:45:20,506 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 10:45:27,150 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:45:27,302 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 10:45:31,685 - main - INFO - 目录已准备: uploads
+2025-06-26 10:45:31,686 - main - INFO - 目录已准备: outputs
+2025-06-26 10:45:31,686 - main - INFO - 系统初始化完成
+2025-06-26 10:45:31,687 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 10:45:31,687 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 10:45:31,693 - main - INFO - ✅ 成功恢复 12 个任务状态
+2025-06-26 10:45:31,719 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 10:45:31,768 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:45:53,534 - main - INFO - 接收文件上传请求: 3d01b140c658c877c8436edec0990f3b.jpg
+2025-06-26 10:45:53,536 - main - INFO - 文件上传成功: uploads/250626_104553.jpg (460400 bytes)
+2025-06-26 10:45:53,613 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:45:58,090 - main - INFO - 文件已保存: uploads/250626_104558.jpg
+2025-06-26 10:45:58,091 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_104558.jpg
+2025-06-26 10:45:58,091 - simple_professional_generator - INFO - 图像文件大小: 460400 bytes
+2025-06-26 10:45:58,112 - simple_professional_generator - INFO - 原图尺寸: (800, 800, 3)
+2025-06-26 10:45:58,112 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 10:45:58,115 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 10:45:58,167 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:46:09,765 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 10:46:09,992 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 10:46:10,046 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 10:46:10,050 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 10:46:10,150 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:46:11,931 - simple_professional_generator - INFO - 图像已保存: outputs/250626_104558/250626_104558_simple_professional.png (0.62 MB)
+2025-06-26 10:46:12,010 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:46:14,556 - simple_professional_generator - INFO - 图像已保存: outputs/250626_104558/250626_104558_simple_comparison.png (1.62 MB)
+2025-06-26 10:46:14,557 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 16.47秒
+2025-06-26 10:46:14,561 - main - INFO - 图像处理完成，耗时: 16.47秒
+2025-06-26 10:46:14,631 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:48:35,183 - main - INFO - 文件已保存: uploads/250626_104835.jpg
+2025-06-26 10:48:35,184 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_104835.jpg
+2025-06-26 10:48:35,184 - simple_professional_generator - INFO - 图像文件大小: 1151 bytes
+2025-06-26 10:48:35,184 - simple_professional_generator - INFO - 原图尺寸: (150, 200, 3)
+2025-06-26 10:48:35,184 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 10:48:35,185 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 10:48:35,292 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:48:35,647 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 10:48:35,659 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 10:48:35,661 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 10:48:35,661 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 10:48:35,664 - simple_professional_generator - INFO - 图像已保存: outputs/250626_104835/250626_104835_simple_professional.png (0.00 MB)
+2025-06-26 10:48:35,670 - simple_professional_generator - INFO - 图像已保存: outputs/250626_104835/250626_104835_simple_comparison.png (0.00 MB)
+2025-06-26 10:48:35,670 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 0.49秒
+2025-06-26 10:48:35,670 - main - INFO - 图像处理完成，耗时: 0.49秒
+2025-06-26 10:48:35,749 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 10:52:26,547 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:52:26,668 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 10:52:30,406 - main - INFO - 目录已准备: uploads
+2025-06-26 10:52:30,406 - main - INFO - 目录已准备: outputs
+2025-06-26 10:52:30,407 - main - INFO - 系统初始化完成
+2025-06-26 10:52:30,407 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 10:52:30,407 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 10:52:30,410 - main - INFO - ✅ 成功恢复 14 个任务状态
+2025-06-26 10:52:30,438 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 10:52:30,479 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:52:30,842 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:52:31,043 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 10:52:33,799 - main - INFO - 目录已准备: uploads
+2025-06-26 10:52:33,799 - main - INFO - 目录已准备: outputs
+2025-06-26 10:52:33,800 - main - INFO - 系统初始化完成
+2025-06-26 10:52:33,800 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 10:52:33,800 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 10:52:33,802 - main - INFO - ✅ 成功恢复 14 个任务状态
+2025-06-26 10:52:33,817 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 10:52:33,881 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:52:37,917 - main - INFO - 文件已保存: uploads/250626_105237.jpg
+2025-06-26 10:52:37,917 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_105237.jpg
+2025-06-26 10:52:37,917 - simple_professional_generator - INFO - 图像文件大小: 15649 bytes
+2025-06-26 10:52:37,923 - simple_professional_generator - INFO - 原图尺寸: (400, 600, 3)
+2025-06-26 10:52:37,923 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 10:52:37,925 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 10:52:38,011 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:52:40,784 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 10:52:40,864 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 10:52:40,878 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 10:52:40,880 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 10:52:40,952 - simple_professional_generator - INFO - 图像已保存: outputs/250626_105237/250626_105237_simple_professional.png (0.00 MB)
+2025-06-26 10:52:41,058 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 10:52:41,085 - simple_professional_generator - INFO - 图像已保存: outputs/250626_105237/250626_105237_simple_comparison.png (0.02 MB)
+2025-06-26 10:52:41,085 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 3.17秒
+2025-06-26 10:52:41,087 - main - INFO - 图像处理完成，耗时: 3.17秒
+2025-06-26 10:52:41,420 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:52:47,068 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:52:47,228 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 10:52:48,196 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:52:50,870 - main - INFO - 目录已准备: uploads
+2025-06-26 10:52:50,870 - main - INFO - 目录已准备: outputs
+2025-06-26 10:52:50,871 - main - INFO - 系统初始化完成
+2025-06-26 10:52:50,871 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 10:52:50,871 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 10:52:50,874 - main - INFO - ✅ 成功恢复 15 个任务状态
+2025-06-26 10:52:50,892 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 10:52:50,974 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:56:52,779 - main - INFO - 接收文件上传请求: 3d01b140c658c877c8436edec0990f3b.jpg
+2025-06-26 10:56:52,781 - main - INFO - 文件上传成功: uploads/250626_105652.jpg (460400 bytes)
+2025-06-26 10:56:52,898 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:56:57,277 - main - INFO - 文件已保存: uploads/250626_105657.jpg
+2025-06-26 10:56:57,278 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_105657.jpg
+2025-06-26 10:56:57,278 - simple_professional_generator - INFO - 图像文件大小: 460400 bytes
+2025-06-26 10:56:57,295 - simple_professional_generator - INFO - 原图尺寸: (800, 800, 3)
+2025-06-26 10:56:57,295 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 10:56:57,299 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 10:56:57,373 - watchfiles.main - INFO - 1 change detected
+2025-06-26 10:57:06,962 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 10:57:07,168 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 10:57:07,216 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 10:57:07,221 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 10:57:07,335 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:57:08,810 - simple_professional_generator - INFO - 图像已保存: outputs/250626_105657/250626_105657_simple_professional.png (0.62 MB)
+2025-06-26 10:57:08,891 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 10:57:11,116 - simple_professional_generator - INFO - 图像已保存: outputs/250626_105657/250626_105657_simple_comparison.png (1.62 MB)
+2025-06-26 10:57:11,117 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 13.84秒
+2025-06-26 10:57:11,121 - main - INFO - 图像处理完成，耗时: 13.84秒
+2025-06-26 10:57:11,188 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:04:20,953 - main - INFO - 文件已保存: uploads/250626_110420.jpg
+2025-06-26 11:04:20,953 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_110420.jpg
+2025-06-26 11:04:20,954 - simple_professional_generator - INFO - 图像文件大小: 1619 bytes
+2025-06-26 11:04:20,954 - simple_professional_generator - INFO - 原图尺寸: (200, 300, 3)
+2025-06-26 11:04:20,954 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 11:04:20,956 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 11:04:21,434 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:04:21,646 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 11:04:21,667 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 11:04:21,671 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 11:04:21,672 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 11:04:21,679 - simple_professional_generator - INFO - 图像已保存: outputs/250626_110420/250626_110420_simple_professional.png (0.00 MB)
+2025-06-26 11:04:21,692 - simple_professional_generator - INFO - 图像已保存: outputs/250626_110420/250626_110420_simple_comparison.png (0.00 MB)
+2025-06-26 11:04:21,693 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 0.74秒
+2025-06-26 11:04:21,693 - main - INFO - 图像处理完成，耗时: 0.74秒
+2025-06-26 11:04:21,791 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:11:42,248 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:11:42,389 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:11:46,670 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:11:49,896 - main - INFO - 目录已准备: uploads
+2025-06-26 11:11:49,897 - main - INFO - 目录已准备: outputs
+2025-06-26 11:11:49,897 - main - INFO - 系统初始化完成
+2025-06-26 11:11:49,898 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:11:49,898 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:11:49,901 - main - INFO - ✅ 成功恢复 17 个任务状态
+2025-06-26 11:11:49,929 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:11:49,995 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:13:01,855 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:13:02,009 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:13:07,574 - main - INFO - 目录已准备: uploads
+2025-06-26 11:13:07,574 - main - INFO - 目录已准备: outputs
+2025-06-26 11:13:07,575 - main - INFO - 系统初始化完成
+2025-06-26 11:13:07,575 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:13:07,575 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:13:07,579 - main - INFO - ✅ 成功恢复 17 个任务状态
+2025-06-26 11:13:07,612 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:13:07,654 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:13:33,616 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:13:33,763 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:13:37,160 - main - INFO - 目录已准备: uploads
+2025-06-26 11:13:37,160 - main - INFO - 目录已准备: outputs
+2025-06-26 11:13:37,160 - main - INFO - 系统初始化完成
+2025-06-26 11:13:37,161 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:13:37,161 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:13:37,165 - main - INFO - ✅ 成功恢复 17 个任务状态
+2025-06-26 11:13:37,191 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:13:37,252 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:14:23,981 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:14:24,107 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:14:28,429 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:14:31,657 - main - INFO - 目录已准备: uploads
+2025-06-26 11:14:31,657 - main - INFO - 目录已准备: outputs
+2025-06-26 11:14:31,658 - main - INFO - 系统初始化完成
+2025-06-26 11:14:31,658 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:14:31,658 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:14:31,661 - main - INFO - ✅ 成功恢复 17 个任务状态
+2025-06-26 11:14:31,677 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:14:31,738 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:15:25,551 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:15:25,658 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:15:28,828 - main - INFO - 目录已准备: uploads
+2025-06-26 11:15:28,830 - main - INFO - 目录已准备: outputs
+2025-06-26 11:15:28,830 - main - INFO - 系统初始化完成
+2025-06-26 11:15:28,830 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:15:28,830 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:15:28,834 - main - INFO - ✅ 成功恢复 17 个任务状态
+2025-06-26 11:15:28,858 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:15:28,913 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:15:55,229 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:15:55,445 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:15:56,273 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:15:58,494 - main - INFO - 目录已准备: uploads
+2025-06-26 11:15:58,494 - main - INFO - 目录已准备: outputs
+2025-06-26 11:15:58,495 - main - INFO - 系统初始化完成
+2025-06-26 11:15:58,495 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:15:58,495 - structural_professional_generator - INFO - 🔧 结构化专业识别图生成器已初始化
+2025-06-26 11:15:58,495 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:15:58,498 - main - INFO - ✅ 成功恢复 17 个任务状态
+2025-06-26 11:15:58,523 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:15:58,595 - watchfiles.main - INFO - 8 changes detected
+2025-06-26 11:19:44,868 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:19:45,032 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:19:48,725 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:19:51,716 - main - INFO - 目录已准备: uploads
+2025-06-26 11:19:51,716 - main - INFO - 目录已准备: outputs
+2025-06-26 11:19:51,716 - main - INFO - 系统初始化完成
+2025-06-26 11:19:51,716 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:19:51,717 - structural_professional_generator - INFO - 🔧 结构化专业识别图生成器已初始化
+2025-06-26 11:19:51,717 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:19:51,720 - main - INFO - ✅ 成功恢复 17 个任务状态
+2025-06-26 11:19:51,740 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:19:51,811 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:23:19,203 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:23:22,430 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:27:41,819 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:27:41,958 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:27:42,739 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:27:45,482 - main - INFO - 目录已准备: uploads
+2025-06-26 11:27:45,483 - main - INFO - 目录已准备: outputs
+2025-06-26 11:27:45,483 - main - INFO - 系统初始化完成
+2025-06-26 11:27:45,483 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:27:45,483 - structural_professional_generator - INFO - 🔧 结构化专业识别图生成器已初始化
+2025-06-26 11:27:45,484 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:27:45,487 - main - INFO - ✅ 成功恢复 18 个任务状态
+2025-06-26 11:27:45,518 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:27:45,550 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:27:55,096 - main - INFO - 接收文件上传请求: 3d01b140c658c877c8436edec0990f3b.jpg
+2025-06-26 11:27:55,098 - main - INFO - 文件上传成功: uploads/250626_112755.jpg (460400 bytes)
+2025-06-26 11:27:55,208 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:29:04,270 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:29:04,450 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:29:05,433 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:29:06,010 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:29:07,481 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:29:08,167 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:29:08,530 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:29:09,061 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:29:12,468 - main - INFO - 目录已准备: uploads
+2025-06-26 11:29:12,468 - main - INFO - 目录已准备: outputs
+2025-06-26 11:29:12,468 - main - INFO - 系统初始化完成
+2025-06-26 11:29:12,468 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:29:12,468 - structural_professional_generator - INFO - 🔧 结构化专业识别图生成器已初始化
+2025-06-26 11:29:12,469 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:29:12,472 - main - INFO - ✅ 成功恢复 18 个任务状态
+2025-06-26 11:29:12,510 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:29:12,556 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:29:23,441 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:29:23,668 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:29:24,619 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:29:25,038 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:29:27,432 - main - INFO - 目录已准备: uploads
+2025-06-26 11:29:27,433 - main - INFO - 目录已准备: outputs
+2025-06-26 11:29:27,433 - main - INFO - 系统初始化完成
+2025-06-26 11:29:27,433 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:29:27,433 - structural_professional_generator - INFO - 🔧 结构化专业识别图生成器已初始化
+2025-06-26 11:29:27,433 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:29:27,437 - main - INFO - ✅ 成功恢复 18 个任务状态
+2025-06-26 11:29:27,471 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:29:27,532 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:29:38,436 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:29:38,588 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:29:39,529 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:29:40,006 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:29:42,674 - main - INFO - 目录已准备: uploads
+2025-06-26 11:29:42,674 - main - INFO - 目录已准备: outputs
+2025-06-26 11:29:42,675 - main - INFO - 系统初始化完成
+2025-06-26 11:29:42,675 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:29:42,675 - structural_professional_generator - INFO - 🔧 结构化专业识别图生成器已初始化
+2025-06-26 11:29:42,675 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:29:42,679 - main - INFO - ✅ 成功恢复 18 个任务状态
+2025-06-26 11:29:42,710 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:29:42,757 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:30:36,134 - main - INFO - 文件已保存: uploads/250626_113036.jpg
+2025-06-26 11:30:36,134 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_113036.jpg
+2025-06-26 11:30:36,134 - simple_professional_generator - INFO - 图像文件大小: 248861 bytes
+2025-06-26 11:30:36,138 - simple_professional_generator - INFO - 原图尺寸: (300, 400, 3)
+2025-06-26 11:30:36,139 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 11:30:36,139 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 11:30:36,237 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:30:38,090 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 11:30:38,122 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 11:30:38,133 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 11:30:38,136 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 11:30:38,238 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:30:38,322 - simple_professional_generator - INFO - 图像已保存: outputs/250626_113036/250626_113036_simple_professional.png (0.15 MB)
+2025-06-26 11:30:38,590 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:30:38,607 - simple_professional_generator - INFO - 图像已保存: outputs/250626_113036/250626_113036_simple_comparison.png (0.41 MB)
+2025-06-26 11:30:38,607 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 2.47秒
+2025-06-26 11:30:38,607 - main - INFO - 图像处理完成，耗时: 2.47秒
+2025-06-26 11:30:38,654 - main - INFO - 🎯 开始结构化专业识别图处理: test_api_image.png
+2025-06-26 11:30:38,656 - main - INFO - 文件已保存: uploads/250626_113038_input.png
+2025-06-26 11:30:38,657 - structural_professional_generator - INFO - 🎯 开始生成结构化专业识别图像: 250626_113038
+2025-06-26 11:30:38,842 - structural_professional_generator - INFO - 图像结构指标 - 边缘密度: 0.258, 颜色数: 81955
+2025-06-26 11:30:38,844 - structural_professional_generator - INFO - ✓ 图像结构分析完成
+2025-06-26 11:30:38,947 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:30:44,277 - structural_generator_core - INFO - 分离出 12 个有效颜色区域
+2025-06-26 11:30:44,277 - structural_professional_generator - INFO - ✓ 结构化颜色分离完成
+2025-06-26 11:30:44,684 - structural_generator_core - INFO - 区域连通性优化完成，生成 21 个闭合区域
+2025-06-26 11:30:44,684 - structural_professional_generator - INFO - ✓ 区域连通性优化完成
+2025-06-26 11:30:44,687 - structural_generator_core - INFO - 矢量边界提取完成，生成 21 个路径
+2025-06-26 11:30:44,688 - structural_professional_generator - INFO - ✓ 边界矢量化完成
+2025-06-26 11:30:44,729 - structural_professional_generator - INFO - ✓ 专业识别图生成完成
+2025-06-26 11:30:44,758 - structural_professional_generator - INFO - 图像已保存: outputs/250626_113038/250626_113038_structural_professional.png
+2025-06-26 11:30:44,823 - structural_professional_generator - INFO - 图像已保存: outputs/250626_113038/250626_113038_structural_comparison.png
+2025-06-26 11:30:44,825 - structural_professional_generator - INFO - 结构信息已保存: outputs/250626_113038/250626_113038_structure_info.json
+2025-06-26 11:30:44,825 - structural_professional_generator - INFO - 🎉 结构化专业识别图生成完成，耗时: 6.17秒
+2025-06-26 11:30:44,833 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:30:45,188 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:32:05,106 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:32:05,211 - main - INFO - 🛑 蜀锦蜀绣AI打样图生成工具关闭
+2025-06-26 11:32:06,184 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:32:08,804 - main - INFO - 目录已准备: uploads
+2025-06-26 11:32:08,804 - main - INFO - 目录已准备: outputs
+2025-06-26 11:32:08,805 - main - INFO - 系统初始化完成
+2025-06-26 11:32:08,805 - simple_professional_generator - INFO - 极简专业织机生成器已初始化
+2025-06-26 11:32:08,805 - structural_professional_generator - INFO - 🔧 结构化专业识别图生成器已初始化
+2025-06-26 11:32:08,806 - main - INFO - 🔄 正在从文件系统恢复任务状态...
+2025-06-26 11:32:08,810 - main - INFO - ✅ 成功恢复 20 个任务状态
+2025-06-26 11:32:08,834 - main - INFO - 🧵 蜀锦蜀绣AI打样图生成工具启动
+2025-06-26 11:32:08,889 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:32:26,021 - main - INFO - 接收文件上传请求: 3d01b140c658c877c8436edec0990f3b.jpg
+2025-06-26 11:32:26,022 - main - INFO - 文件上传成功: uploads/250626_113226.jpg (460400 bytes)
+2025-06-26 11:32:26,114 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:33:57,498 - main - INFO - 文件已保存: uploads/250626_113357.jpg
+2025-06-26 11:33:57,499 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_113357.jpg
+2025-06-26 11:33:57,499 - simple_professional_generator - INFO - 图像文件大小: 75898 bytes
+2025-06-26 11:33:57,500 - simple_professional_generator - INFO - 原图尺寸: (150, 200, 3)
+2025-06-26 11:33:57,500 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 11:33:57,505 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 11:33:57,570 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:33:58,157 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 11:33:58,170 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 11:33:58,173 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 11:33:58,173 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 11:33:58,227 - simple_professional_generator - INFO - 图像已保存: outputs/250626_113357/250626_113357_simple_professional.png (0.05 MB)
+2025-06-26 11:33:58,280 - simple_professional_generator - INFO - 图像已保存: outputs/250626_113357/250626_113357_simple_comparison.png (0.13 MB)
+2025-06-26 11:33:58,281 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 0.78秒
+2025-06-26 11:33:58,281 - main - INFO - 图像处理完成，耗时: 0.78秒
+2025-06-26 11:33:58,328 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:36:10,083 - main - INFO - 接收文件上传请求: 3d01b140c658c877c8436edec0990f3b.jpg
+2025-06-26 11:36:10,085 - main - INFO - 文件上传成功: uploads/250626_113610.jpg (460400 bytes)
+2025-06-26 11:36:10,198 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:37:24,177 - main - INFO - 文件已保存: uploads/250626_113724.jpg
+2025-06-26 11:37:24,177 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_113724.jpg
+2025-06-26 11:37:24,177 - simple_professional_generator - INFO - 图像文件大小: 52777 bytes
+2025-06-26 11:37:24,178 - simple_professional_generator - INFO - 原图尺寸: (150, 200, 3)
+2025-06-26 11:37:24,178 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 11:37:24,179 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 11:37:24,433 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:37:24,516 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 11:37:24,529 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 11:37:24,533 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 11:37:24,534 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 11:37:24,727 - simple_professional_generator - INFO - 图像已保存: outputs/250626_113724/250626_113724_simple_professional.png (0.02 MB)
+2025-06-26 11:37:24,841 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:37:24,959 - simple_professional_generator - INFO - 图像已保存: outputs/250626_113724/250626_113724_simple_comparison.png (0.08 MB)
+2025-06-26 11:37:24,960 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 0.78秒
+2025-06-26 11:37:24,960 - main - INFO - 图像处理完成，耗时: 0.78秒
+2025-06-26 11:37:25,193 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:38:23,638 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:39:39,651 - main - INFO - 接收文件上传请求: 3d01b140c658c877c8436edec0990f3b.jpg
+2025-06-26 11:39:39,653 - main - INFO - 文件上传成功: uploads/250626_113939.jpg (460400 bytes)
+2025-06-26 11:39:39,770 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:42:08,738 - main - INFO - 文件已保存: uploads/250626_114208.jpg
+2025-06-26 11:42:08,738 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_114208.jpg
+2025-06-26 11:42:08,739 - simple_professional_generator - INFO - 图像文件大小: 83128 bytes
+2025-06-26 11:42:08,740 - simple_professional_generator - INFO - 原图尺寸: (150, 200, 3)
+2025-06-26 11:42:08,740 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 11:42:08,742 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 11:42:08,836 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:42:09,375 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 11:42:09,385 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 11:42:09,387 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 11:42:09,387 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 11:42:09,431 - simple_professional_generator - INFO - 图像已保存: outputs/250626_114208/250626_114208_simple_professional.png (0.06 MB)
+2025-06-26 11:42:09,482 - simple_professional_generator - INFO - 图像已保存: outputs/250626_114208/250626_114208_simple_comparison.png (0.14 MB)
+2025-06-26 11:42:09,482 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 0.74秒
+2025-06-26 11:42:09,482 - main - INFO - 图像处理完成，耗时: 0.74秒
+2025-06-26 11:42:09,489 - main - INFO - 文件已保存: uploads/250626_114209.jpg
+2025-06-26 11:42:09,489 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_114209.jpg
+2025-06-26 11:42:09,489 - simple_professional_generator - INFO - 图像文件大小: 83128 bytes
+2025-06-26 11:42:09,491 - simple_professional_generator - INFO - 原图尺寸: (150, 200, 3)
+2025-06-26 11:42:09,491 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 11:42:09,492 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 11:42:09,551 - watchfiles.main - INFO - 4 changes detected
+2025-06-26 11:42:10,138 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 11:42:10,145 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 11:42:10,147 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 11:42:10,148 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 11:42:10,194 - simple_professional_generator - INFO - 图像已保存: outputs/250626_114209/250626_114209_simple_professional.png (0.06 MB)
+2025-06-26 11:42:10,237 - simple_professional_generator - INFO - 图像已保存: outputs/250626_114209/250626_114209_simple_comparison.png (0.14 MB)
+2025-06-26 11:42:10,239 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 0.75秒
+2025-06-26 11:42:10,239 - main - INFO - 图像处理完成，耗时: 0.75秒
+2025-06-26 11:42:10,249 - main - INFO - 文件已保存: uploads/250626_114210.jpg
+2025-06-26 11:42:10,250 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_114210.jpg
+2025-06-26 11:42:10,250 - simple_professional_generator - INFO - 图像文件大小: 83128 bytes
+2025-06-26 11:42:10,251 - simple_professional_generator - INFO - 原图尺寸: (150, 200, 3)
+2025-06-26 11:42:10,251 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 11:42:10,252 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 11:42:10,260 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:42:10,612 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:42:10,821 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 11:42:10,830 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 11:42:10,833 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 11:42:10,834 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 11:42:10,879 - simple_professional_generator - INFO - 图像已保存: outputs/250626_114210/250626_114210_simple_professional.png (0.06 MB)
+2025-06-26 11:42:10,923 - simple_professional_generator - INFO - 图像已保存: outputs/250626_114210/250626_114210_simple_comparison.png (0.14 MB)
+2025-06-26 11:42:10,924 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 0.67秒
+2025-06-26 11:42:10,924 - main - INFO - 图像处理完成，耗时: 0.67秒
+2025-06-26 11:42:10,964 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:45:28,336 - main - INFO - 接收文件上传请求: 3d01b140c658c877c8436edec0990f3b.jpg
+2025-06-26 11:45:28,338 - main - INFO - 文件上传成功: uploads/250626_114528.jpg (460400 bytes)
+2025-06-26 11:45:28,457 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:46:22,073 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:46:57,039 - main - INFO - 文件已保存: uploads/250626_114657.jpg
+2025-06-26 11:46:57,039 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_114657.jpg
+2025-06-26 11:46:57,039 - simple_professional_generator - INFO - 图像文件大小: 83122 bytes
+2025-06-26 11:46:57,040 - simple_professional_generator - INFO - 原图尺寸: (150, 200, 3)
+2025-06-26 11:46:57,041 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 11:46:57,041 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 11:46:57,112 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:46:57,570 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 11:46:57,579 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 11:46:57,581 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 11:46:57,582 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 11:46:57,622 - simple_professional_generator - INFO - 图像已保存: outputs/250626_114657/250626_114657_simple_professional.png (0.06 MB)
+2025-06-26 11:46:57,672 - simple_professional_generator - INFO - 图像已保存: outputs/250626_114657/250626_114657_simple_comparison.png (0.14 MB)
+2025-06-26 11:46:57,672 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 0.63秒
+2025-06-26 11:46:57,672 - main - INFO - 图像处理完成，耗时: 0.63秒
+2025-06-26 11:46:57,719 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 11:50:39,185 - main - INFO - 接收文件上传请求: 3d01b140c658c877c8436edec0990f3b.jpg
+2025-06-26 11:50:39,187 - main - INFO - 文件上传成功: uploads/250626_115039.jpg (460400 bytes)
+2025-06-26 11:50:39,300 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:50:41,275 - main - INFO - 文件已保存: uploads/250626_115041.jpg
+2025-06-26 11:50:41,276 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_115041.jpg
+2025-06-26 11:50:41,276 - simple_professional_generator - INFO - 图像文件大小: 460400 bytes
+2025-06-26 11:50:41,289 - simple_professional_generator - INFO - 原图尺寸: (800, 800, 3)
+2025-06-26 11:50:41,289 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 11:50:41,291 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 11:50:41,343 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:50:50,146 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 11:50:50,340 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 11:50:50,382 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 11:50:50,386 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 11:50:50,470 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:50:52,033 - simple_professional_generator - INFO - 图像已保存: outputs/250626_115041/250626_115041_simple_professional.png (0.62 MB)
+2025-06-26 11:50:52,140 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:50:54,514 - simple_professional_generator - INFO - 图像已保存: outputs/250626_115041/250626_115041_simple_comparison.png (1.62 MB)
+2025-06-26 11:50:54,515 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 13.24秒
+2025-06-26 11:50:54,516 - main - INFO - 图像处理完成，耗时: 13.24秒
+2025-06-26 11:50:54,630 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:51:52,163 - main - INFO - 接收文件上传请求: WechatIMG73.jpg
+2025-06-26 11:51:52,165 - main - INFO - 文件上传成功: uploads/250626_115152.jpg (1684150 bytes)
+2025-06-26 11:51:52,253 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:51:58,462 - main - INFO - 文件已保存: uploads/250626_115158.jpg
+2025-06-26 11:51:58,462 - simple_professional_generator - INFO - 尝试加载图像: /Users/wangkai/Documents/GitHub/shuxiu_ zhijitu/backend/uploads/250626_115158.jpg
+2025-06-26 11:51:58,463 - simple_professional_generator - INFO - 图像文件大小: 1684150 bytes
+2025-06-26 11:51:58,569 - simple_professional_generator - INFO - 原图尺寸: (3264, 2448, 3)
+2025-06-26 11:51:58,569 - simple_professional_generator - INFO - 开始极简专业处理...
+2025-06-26 11:51:58,579 - watchfiles.main - INFO - 1 change detected
+2025-06-26 11:51:58,591 - simple_professional_generator - INFO -   ✓ 轻度去噪完成
+2025-06-26 11:53:43,184 - simple_professional_generator - INFO -   ✓ 颜色量化完成
+2025-06-26 11:53:46,837 - simple_professional_generator - INFO -   ✓ 边缘保持平滑完成
+2025-06-26 11:53:47,592 - simple_professional_generator - INFO -   ✓ 色彩增强完成
+2025-06-26 11:53:47,653 - simple_professional_generator - INFO -   ✓ 轻度锐化完成
+2025-06-26 11:53:47,783 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:54:08,534 - simple_professional_generator - INFO - 图像已保存: outputs/250626_115158/250626_115158_simple_professional.png (3.18 MB)
+2025-06-26 11:54:08,666 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 11:54:58,529 - simple_professional_generator - INFO - 图像已保存: outputs/250626_115158/250626_115158_simple_comparison.png (10.24 MB)
+2025-06-26 11:54:58,535 - simple_professional_generator - INFO - 极简专业图像生成完成，耗时: 180.07秒
+2025-06-26 11:54:58,543 - main - INFO - 图像处理完成，耗时: 180.07秒
+2025-06-26 11:54:58,643 - watchfiles.main - INFO - 1 change detected

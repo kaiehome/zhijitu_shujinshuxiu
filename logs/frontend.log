@@ -1,0 +1,70 @@
+
+> sichuan-brocade-frontend@1.0.0 dev
+> next dev
+
+   ▲ Next.js 14.0.0
+   - Local:        http://localhost:3000
+   - Experiments (use at your own risk):
+     · forceSwcTransforms
+
+ ✓ Ready in 3.4s
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 942ms (434 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ○ Compiling / ...
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled / in 1033ms (1048 modules)
+(node:36602) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Failed to proxy http://localhost:8000/api/process-structural Error: socket hang up
+    at Socket.socketCloseListener (node:_http_client:491:27)
+    at Socket.emit (node:events:530:35)
+    at TCP.<anonymous> (node:net:351:12) {
+  code: 'ECONNRESET'
+}
+Error: socket hang up
+    at Socket.socketCloseListener (node:_http_client:491:27)
+    at Socket.emit (node:events:530:35)
+    at TCP.<anonymous> (node:net:351:12) {
+  code: 'ECONNRESET'
+}
+Failed to proxy http://localhost:8000/api/process-structural Error: socket hang up
+    at Socket.socketCloseListener (node:_http_client:491:27)
+    at Socket.emit (node:events:530:35)
+    at TCP.<anonymous> (node:net:351:12) {
+  code: 'ECONNRESET'
+}
+Error: socket hang up
+    at Socket.socketCloseListener (node:_http_client:491:27)
+    at Socket.emit (node:events:530:35)
+    at TCP.<anonymous> (node:net:351:12) {
+  code: 'ECONNRESET'
+}
+ ⨯ ./src/components/ResultSection.tsx:26:0
+Module not found: Can't resolve './PreviewWithHighlight'
+[0m [90m 24 |[39m [36mimport[39m [33mFileTextOutlined[39m [36mfrom[39m [32m'@ant-design/icons/FileTextOutlined'[39m[33m;[39m[0m
+[0m [90m 25 |[39m [36mimport[39m axios [36mfrom[39m [32m'axios'[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m 26 |[39m [36mimport[39m [33mPreviewWithHighlight[39m [36mfrom[39m [32m'./PreviewWithHighlight'[39m[33m;[39m[0m
+[0m [90m 27 |[39m[0m
+[0m [90m 28 |[39m [36mconst[39m { [33mTitle[39m[33m,[39m [33mText[39m[33m,[39m [33mParagraph[39m } [33m=[39m [33mTypography[39m[33m;[39m[0m
+[0m [90m 29 |[39m[0m
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/pages/index.tsx
+ ✓ Compiled in 685ms (1048 modules)
+ ✓ Compiled in 541ms (1046 modules)
+Failed to proxy http://localhost:8000/api/process-structural Error: socket hang up
+    at Socket.socketCloseListener (node:_http_client:491:27)
+    at Socket.emit (node:events:530:35)
+    at TCP.<anonymous> (node:net:351:12) {
+  code: 'ECONNRESET'
+}
+Error: socket hang up
+    at Socket.socketCloseListener (node:_http_client:491:27)
+    at Socket.emit (node:events:530:35)
+    at TCP.<anonymous> (node:net:351:12) {
+  code: 'ECONNRESET'
+}
+ ✓ Compiled /_error in 220ms (1048 modules)
