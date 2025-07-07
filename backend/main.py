@@ -702,6 +702,7 @@ async def process_structural_image(
         raise HTTPException(status_code=500, detail=error_msg)
 
 if __name__ == "__main__":
+    import uvicorn
     uvicorn.run(
         "main:app",
         host="0.0.0.0",
@@ -709,4 +710,4 @@ if __name__ == "__main__":
         reload=True,
         log_level="info",
         access_log=True
-    ) 
+    )
