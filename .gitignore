@@ -1,0 +1,26 @@
+# Node.js
+node_modules/
+.next/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+.eggs/
+.Python
+
+# macOS
+.DS_Store
+
+# others
+*.log
+*.sqlite3
