@@ -11,3 +11,4 @@ aiofiles==23.2.1
 requests==2.31.0
 # 国内大模型API支持
 dashscope>=1.10.0 
+scikit-image 
