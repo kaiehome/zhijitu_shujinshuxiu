@@ -222,105 +222,236 @@ class SichuanBrocadeProcessor:
             raise ImageProcessingError("文件大小超过10MB限制")
     
     def _load_and_preprocess(self, input_path: str) -> np.ndarray:
-        """
-        加载和预处理图像
-        
-        Args:
-            input_path: 输入图像路径
-            
-        Returns:
-            np.ndarray: 预处理后的图像数组
-        """
+        """加载并预处理图像，特别优化熊猫图像"""
         try:
-            # 使用PIL安全加载图像
-            with Image.open(input_path) as pil_image:
-                # 验证图像格式
-                if pil_image.format not in ['JPEG', 'PNG']:
-                    raise ImageProcessingError(f"不支持的图像格式: {pil_image.format}")
-                
-                # 转换为RGB模式
-                if pil_image.mode != 'RGB':
-                    pil_image = pil_image.convert('RGB')
-                
-                # 检查图像尺寸
-                width, height = pil_image.size
-                if width < self.config["min_image_size"] or height < self.config["min_image_size"]:
-                    raise ImageProcessingError(f"图像尺寸过小，最小尺寸: {self.config['min_image_size']}x{self.config['min_image_size']}")
-                
-                # 转换为numpy数组
-                image = np.array(pil_image)
-                
-                # 调整尺寸（保持比例）
-                image = self._resize_image(image)
-                
-                logger.info(f"图像加载成功，尺寸: {image.shape[:2]}")
-                return image
-                
-        except ImageProcessingError:
-            raise
+            # 加载图像
+            image = cv2.imread(input_path)
+            if image is None:
+                raise ImageProcessingError(f"无法加载图像: {input_path}")
+            
+            # 检查图像尺寸
+            height, width = image.shape[:2]
+            logger.info(f"原始图像尺寸: {width}x{height}")
+            
+            # 熊猫图像特殊预处理
+            if self._is_panda_image(image):
+                logger.info("检测到熊猫图像，应用特殊预处理")
+                image = self._preprocess_panda_image(image)
+            
+            # 标准预处理
+            image = self._standard_preprocess(image)
+            
+            return image
+            
         except Exception as e:
-            raise ImageProcessingError(f"图像加载失败: {str(e)}")
+            logger.error(f"图像加载和预处理失败: {str(e)}")
+            raise ImageProcessingError(f"图像预处理失败: {str(e)}")
     
-    def _resize_image(self, image: np.ndarray) -> np.ndarray:
-        """
-        智能调整图像尺寸 - 优化版
-        
-        Args:
-            image: 输入图像数组
+    def _is_panda_image(self, image: np.ndarray) -> bool:
+        """检测是否为熊猫图像"""
+        try:
+            # 转换为灰度图
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
             
-        Returns:
-            np.ndarray: 调整后的图像数组
-        """
-        height, width = image.shape[:2]
-        max_size = self.config["max_image_size"]
-        min_size = self.config["min_image_size"]
-        high_res_threshold = self.config["high_res_threshold"]
-        
-        original_pixels = width * height
-        
-        # 对于小图像，进行智能放大以提升刺绣质量
-        if max(height, width) < min_size:
-            # 小图像放大到至少 min_size
-            scale = min_size / max(height, width)
-            new_width = int(width * scale)
-            new_height = int(height * scale)
+            # 检测熊猫特征：黑白对比
+            # 计算黑色区域比例（熊猫的眼睛、耳朵、身体）
+            black_pixels = np.sum(gray < 80)
+            total_pixels = gray.size
             
-            # 使用INTER_CUBIC进行放大，质量更好
-            image = cv2.resize(
-                image, 
-                (new_width, new_height), 
-                interpolation=cv2.INTER_CUBIC
-            )
+            # 计算白色区域比例（熊猫的面部、身体）
+            white_pixels = np.sum(gray > 180)
             
-            logger.info(f"小图像智能放大: {width}x{height} -> {new_width}x{new_height}")
+            # 如果黑白区域比例符合熊猫特征，则认为是熊猫图像
+            black_ratio = black_pixels / total_pixels
+            white_ratio = white_pixels / total_pixels
             
-        elif max(height, width) > max_size:
-            # 超大图像适度缩放
-            scale = max_size / max(height, width)
-            new_width = int(width * scale)
-            new_height = int(height * scale)
+            # 熊猫通常有较高的黑白对比度
+            if black_ratio > 0.1 and white_ratio > 0.2:
+                logger.info(f"检测到熊猫特征 - 黑色区域: {black_ratio:.2f}, 白色区域: {white_ratio:.2f}")
+                return True
             
-            # 使用LANCZOS4保持最佳质量
-            image = cv2.resize(
-                image, 
-                (new_width, new_height), 
-                interpolation=cv2.INTER_LANCZOS4
-            )
+            return False
             
-            logger.info(f"大图像适度缩放: {width}x{height} -> {new_width}x{new_height}")
+        except Exception as e:
+            logger.warning(f"熊猫检测失败: {str(e)}")
+            return False
+    
+    def _preprocess_panda_image(self, image: np.ndarray) -> np.ndarray:
+        """熊猫图像特殊预处理，增强质量处理"""
+        try:
+            # 1. 增强对比度
+            lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+            l, a, b = cv2.split(lab)
             
-        elif self.config["preserve_large_images"] and max(height, width) >= high_res_threshold:
-            # 高分辨率图像保持原尺寸
-            logger.info(f"高分辨率图像保持原尺寸: {width}x{height} ({original_pixels:,} 像素)")
+            # 使用CLAHE增强亮度通道
+            clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+            l = clahe.apply(l)
             
-        else:
-            # 中等尺寸图像保持不变
-            logger.info(f"图像尺寸适中，保持原尺寸: {width}x{height}")
-        
-        final_pixels = image.shape[1] * image.shape[0]
-        logger.info(f"像素数变化: {original_pixels:,} -> {final_pixels:,} ({final_pixels/original_pixels:.2f}x)")
-        
-        return image
+            # 重新合并LAB通道
+            lab = cv2.merge([l, a, b])
+            enhanced = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
+            
+            # 2. 优化熊猫的黑白区域
+            enhanced = self._optimize_panda_contrast(enhanced)
+            
+            # 3. 特别处理下巴/颈部区域
+            enhanced = self._enhance_panda_chin_area(enhanced)
+            
+            # 4. 增强边缘清晰度
+            enhanced = self._enhance_panda_edges(enhanced)
+            
+            # 5. 消除噪声
+            enhanced = self._denoise_panda_image(enhanced)
+            
+            # 6. 颜色平衡优化
+            enhanced = self._balance_panda_colors(enhanced)
+            
+            return enhanced
+            
+        except Exception as e:
+            logger.warning(f"熊猫图像预处理失败: {str(e)}")
+            return image
+    
+    def _enhance_panda_edges(self, image: np.ndarray) -> np.ndarray:
+        """增强熊猫图像的边缘清晰度"""
+        try:
+            # 转换为灰度图
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            
+            # 使用拉普拉斯算子检测边缘
+            laplacian = cv2.Laplacian(gray, cv2.CV_64F)
+            laplacian = np.uint8(np.absolute(laplacian))
+            
+            # 使用Sobel算子检测边缘
+            sobelx = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=3)
+            sobely = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=3)
+            sobel = np.sqrt(sobelx**2 + sobely**2)
+            sobel = np.uint8(sobel)
+            
+            # 结合两种边缘检测结果
+            edges = cv2.addWeighted(laplacian, 0.5, sobel, 0.5, 0)
+            
+            # 创建边缘增强掩码
+            edge_mask = edges > 30  # 阈值化边缘
+            
+            # 在边缘区域增强对比度
+            enhanced = image.copy()
+            enhanced[edge_mask] = cv2.addWeighted(enhanced[edge_mask], 1.2, enhanced[edge_mask], 0, 10)
+            
+            return enhanced
+            
+        except Exception as e:
+            logger.warning(f"熊猫边缘增强失败: {str(e)}")
+            return image
+    
+    def _denoise_panda_image(self, image: np.ndarray) -> np.ndarray:
+        """消除熊猫图像的噪声"""
+        try:
+            # 使用双边滤波保持边缘的同时去除噪声
+            denoised = cv2.bilateralFilter(image, 9, 75, 75)
+            
+            # 对于熊猫的黑白区域，使用更温和的滤波
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            
+            # 检测黑色和白色区域
+            black_mask = gray < 80
+            white_mask = gray > 180
+            
+            # 在这些区域使用更温和的滤波
+            if np.sum(black_mask) > 0 or np.sum(white_mask) > 0:
+                # 使用高斯滤波进行温和去噪
+                gaussian = cv2.GaussianBlur(image, (3, 3), 0)
+                
+                # 在黑白区域应用高斯滤波
+                denoised[black_mask] = gaussian[black_mask]
+                denoised[white_mask] = gaussian[white_mask]
+            
+            return denoised
+            
+        except Exception as e:
+            logger.warning(f"熊猫图像去噪失败: {str(e)}")
+            return image
+    
+    def _balance_panda_colors(self, image: np.ndarray) -> np.ndarray:
+        """平衡熊猫图像的颜色"""
+        try:
+            # 转换为HSV色彩空间
+            hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+            h, s, v = cv2.split(hsv)
+            
+            # 增强饱和度
+            s = cv2.add(s, 10)
+            
+            # 平衡亮度
+            # 使用直方图均衡化
+            v = cv2.equalizeHist(v)
+            
+            # 重新合并HSV通道
+            hsv = cv2.merge([h, s, v])
+            balanced = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
+            
+            # 特别优化熊猫的黑白对比
+            balanced = self._optimize_panda_black_white_balance(balanced)
+            
+            return balanced
+            
+        except Exception as e:
+            logger.warning(f"熊猫颜色平衡失败: {str(e)}")
+            return image
+    
+    def _optimize_panda_black_white_balance(self, image: np.ndarray) -> np.ndarray:
+        """优化熊猫黑白对比平衡"""
+        try:
+            # 转换为灰度图
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            
+            # 计算图像的整体亮度
+            mean_brightness = np.mean(gray)
+            
+            # 根据整体亮度调整对比度
+            if mean_brightness < 100:  # 图像偏暗
+                # 增强亮度和对比度
+                enhanced = cv2.convertScaleAbs(image, alpha=1.1, beta=15)
+            elif mean_brightness > 150:  # 图像偏亮
+                # 降低亮度，增强对比度
+                enhanced = cv2.convertScaleAbs(image, alpha=1.05, beta=-10)
+            else:  # 亮度适中
+                # 轻微增强对比度
+                enhanced = cv2.convertScaleAbs(image, alpha=1.02, beta=5)
+            
+            return enhanced
+            
+        except Exception as e:
+            logger.warning(f"熊猫黑白平衡优化失败: {str(e)}")
+            return image
+    
+    def _standard_preprocess(self, image: np.ndarray) -> np.ndarray:
+        """标准图像预处理"""
+        try:
+            # 检查图像尺寸
+            height, width = image.shape[:2]
+            
+            # 如果图像太大，进行缩放
+            if height > self.config["max_image_size"] or width > self.config["max_image_size"]:
+                scale = min(self.config["max_image_size"] / height, self.config["max_image_size"] / width)
+                new_height = int(height * scale)
+                new_width = int(width * scale)
+                image = cv2.resize(image, (new_width, new_height), interpolation=cv2.INTER_AREA)
+                logger.info(f"图像已缩放至: {new_width}x{new_height}")
+            
+            # 如果图像太小，进行放大
+            elif height < self.config["min_image_size"] or width < self.config["min_image_size"]:
+                scale = max(self.config["min_image_size"] / height, self.config["min_image_size"] / width)
+                new_height = int(height * scale)
+                new_width = int(width * scale)
+                image = cv2.resize(image, (new_width, new_height), interpolation=cv2.INTER_CUBIC)
+                logger.info(f"图像已放大至: {new_width}x{new_height}")
+            
+            return image
+            
+        except Exception as e:
+            logger.warning(f"标准预处理失败: {str(e)}")
+            return image
     
     def _color_reduction(self, image: np.ndarray, n_colors: int) -> np.ndarray:
         """
@@ -896,6 +1027,61 @@ class SichuanBrocadeProcessor:
         except Exception as e:
             logger.warning(f"获取唯一颜色失败: {str(e)}")
             return []
+    
+    def _optimize_panda_contrast(self, image: np.ndarray) -> np.ndarray:
+        """优化熊猫图像的对比度"""
+        try:
+            # 转换为灰度图
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            
+            # 检测并增强黑色区域
+            black_mask = gray < 80
+            if np.sum(black_mask) > 0:
+                image[black_mask] = [0, 0, 0]
+            
+            # 检测并增强白色区域
+            white_mask = gray > 180
+            if np.sum(white_mask) > 0:
+                image[white_mask] = [255, 255, 255]
+            
+            return image
+            
+        except Exception as e:
+            logger.warning(f"熊猫对比度优化失败: {str(e)}")
+            return image
+    
+    def _enhance_panda_chin_area(self, image: np.ndarray) -> np.ndarray:
+        """增强熊猫下巴/颈部区域"""
+        try:
+            height, width = image.shape[:2]
+            
+            # 定义下巴/颈部区域（图像下半部分）
+            chin_region = image[height//2:, :]
+            
+            # 转换为LAB色彩空间
+            lab = cv2.cvtColor(chin_region, cv2.COLOR_BGR2LAB)
+            l, a, b = cv2.split(lab)
+            
+            # 增强下巴区域的对比度
+            clahe = cv2.createCLAHE(clipLimit=1.5, tileGridSize=(4, 4))
+            l = clahe.apply(l)
+            
+            # 轻微增强饱和度
+            a = cv2.add(a, 3)
+            b = cv2.add(b, 3)
+            
+            # 重新合并通道
+            lab = cv2.merge([l, a, b])
+            enhanced_chin = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
+            
+            # 将增强后的区域放回原图
+            image[height//2:, :] = enhanced_chin
+            
+            return image
+            
+        except Exception as e:
+            logger.warning(f"熊猫下巴区域增强失败: {str(e)}")
+            return image
     
     def get_processing_info(self) -> Dict[str, Any]:
         """

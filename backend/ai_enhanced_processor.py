@@ -5,7 +5,7 @@ import numpy as np
 import cv2
 from PIL import Image
 import logging
-from typing import Tuple, Dict, Any, Optional
+from typing import Tuple, Dict, Any, Optional, List
 import base64
 from io import BytesIO
 
@@ -303,30 +303,331 @@ class AIEnhancedProcessor:
             return {"main_subject": "unknown", "confidence": 0.0}
     
     def _detect_living_subject(self, image: np.ndarray, subject_info: Dict[str, Any]) -> np.ndarray:
-        """检测生物体主体"""
-        height, width = image.shape[:2]
-        
-        if subject_info["main_subject"] == "熊猫":
-            # 熊猫特化检测：查找黑白区域
-            gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+        """检测生物体主体，特别优化熊猫检测"""
+        try:
+            height, width = image.shape[:2]
             
-            # 检测白色区域（熊猫脸部）
-            white_mask = gray > 180
-            # 检测黑色区域（熊猫眼部、耳朵）
-            black_mask = gray < 80
+            # 检查是否为熊猫
+            if "熊猫" in subject_info.get("main_subject", ""):
+                return self._detect_panda_specific(image, subject_info)
             
-            # 合并熊猫特征区域
-            panda_mask = np.logical_or(white_mask, black_mask)
+            # 其他生物体检测
+            return self._detect_general_living_subject(image, subject_info)
             
-            # 形态学处理连接区域
-            kernel = np.ones((15, 15), np.uint8)
-            panda_mask = cv2.morphologyEx(panda_mask.astype(np.uint8), cv2.MORPH_CLOSE, kernel)
+        except Exception as e:
+            logger.warning(f"生物体检测失败: {str(e)}")
+            return self._fallback_mask(image)
+    
+    def _detect_panda_specific(self, image: np.ndarray, subject_info: Dict[str, Any]) -> np.ndarray:
+        """专门针对熊猫的检测算法，增强面部特征检测"""
+        try:
+            height, width = image.shape[:2]
             
-            return panda_mask > 0
-        
-        else:
-            # 通用生物体检测
-            return self._detect_general_subject(image)
+            # 转换为灰度图
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            
+            # 创建掩码
+            mask = np.zeros((height, width), dtype=np.uint8)
+            
+            # 1. 检测熊猫的黑色区域（眼睛、耳朵、身体）
+            # 使用自适应阈值检测黑色区域
+            black_mask = cv2.adaptiveThreshold(
+                gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2
+            )
+            
+            # 2. 检测熊猫的白色区域（面部、身体）
+            # 使用高阈值检测白色区域
+            _, white_mask = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY)
+            
+            # 3. 结合黑白区域
+            panda_mask = cv2.bitwise_or(black_mask, white_mask)
+            
+            # 4. 形态学操作清理噪声
+            kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
+            panda_mask = cv2.morphologyEx(panda_mask, cv2.MORPH_CLOSE, kernel)
+            panda_mask = cv2.morphologyEx(panda_mask, cv2.MORPH_OPEN, kernel)
+            
+            # 5. 查找轮廓
+            contours, _ = cv2.findContours(panda_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            
+            # 6. 选择最大的轮廓作为熊猫主体
+            if contours:
+                largest_contour = max(contours, key=cv2.contourArea)
+                cv2.fillPoly(mask, [largest_contour], 255)
+            
+            # 7. 增强面部特征检测
+            face_features_mask = self._detect_panda_face_features(image, mask)
+            if face_features_mask is not None:
+                mask = cv2.bitwise_or(mask, face_features_mask)
+            
+            # 8. 特别检测下巴/颈部区域（基于用户标记）
+            chin_mask = self._detect_chin_neck_area(image, mask)
+            if chin_mask is not None:
+                mask = cv2.bitwise_or(mask, chin_mask)
+            
+            # 9. 优化区域边界
+            mask = self._optimize_panda_boundaries(mask)
+            
+            return mask
+            
+        except Exception as e:
+            logger.warning(f"熊猫特定检测失败: {str(e)}")
+            return self._fallback_mask(image)
+    
+    def _detect_panda_face_features(self, image: np.ndarray, base_mask: np.ndarray) -> Optional[np.ndarray]:
+        """检测熊猫面部特征（眼睛、鼻子、耳朵）"""
+        try:
+            height, width = image.shape[:2]
+            
+            # 创建面部特征掩码
+            features_mask = np.zeros((height, width), dtype=np.uint8)
+            
+            # 转换为灰度图
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            
+            # 1. 检测眼睛区域（熊猫的黑色眼圈）
+            # 使用圆形检测器查找眼睛
+            circles = cv2.HoughCircles(
+                gray, cv2.HOUGH_GRADIENT, dp=1, minDist=50,
+                param1=50, param2=30, minRadius=10, maxRadius=50
+            )
+            
+            if circles is not None:
+                circles = np.uint16(np.around(circles))
+                for circle in circles[0, :]:
+                    # 检查是否在基础掩码内
+                    if base_mask[circle[1], circle[0]] > 0:
+                        cv2.circle(features_mask, (circle[0], circle[1]), circle[2], 255, -1)
+            
+            # 2. 检测鼻子区域（熊猫的黑色鼻子）
+            # 使用模板匹配或轮廓检测
+            nose_mask = self._detect_panda_nose(gray, base_mask)
+            if nose_mask is not None:
+                features_mask = cv2.bitwise_or(features_mask, nose_mask)
+            
+            # 3. 检测耳朵区域（熊猫的圆形耳朵）
+            ears_mask = self._detect_panda_ears(gray, base_mask)
+            if ears_mask is not None:
+                features_mask = cv2.bitwise_or(features_mask, ears_mask)
+            
+            return features_mask if np.sum(features_mask) > 0 else None
+            
+        except Exception as e:
+            logger.warning(f"熊猫面部特征检测失败: {str(e)}")
+            return None
+    
+    def _detect_panda_nose(self, gray: np.ndarray, base_mask: np.ndarray) -> Optional[np.ndarray]:
+        """检测熊猫鼻子"""
+        try:
+            height, width = gray.shape
+            
+            # 创建鼻子掩码
+            nose_mask = np.zeros((height, width), dtype=np.uint8)
+            
+            # 在图像下半部分寻找鼻子（通常鼻子在面部下半部分）
+            lower_half = gray[height//2:, :]
+            lower_mask = base_mask[height//2:, :]
+            
+            # 使用形态学操作找到小的黑色区域
+            kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+            black_regions = cv2.morphologyEx(lower_half, cv2.MORPH_OPEN, kernel)
+            
+            # 找到轮廓
+            contours, _ = cv2.findContours(black_regions, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            
+            for contour in contours:
+                # 检查轮廓大小（鼻子应该比较小）
+                area = cv2.contourArea(contour)
+                if 50 < area < 500:  # 鼻子的合理大小范围
+                    # 调整坐标
+                    contour[:, :, 1] += height//2
+                    cv2.fillPoly(nose_mask, [contour], 255)
+            
+            return nose_mask if np.sum(nose_mask) > 0 else None
+            
+        except Exception as e:
+            logger.warning(f"熊猫鼻子检测失败: {str(e)}")
+            return None
+    
+    def _detect_panda_ears(self, gray: np.ndarray, base_mask: np.ndarray) -> Optional[np.ndarray]:
+        """检测熊猫耳朵"""
+        try:
+            height, width = gray.shape
+            
+            # 创建耳朵掩码
+            ears_mask = np.zeros((height, width), dtype=np.uint8)
+            
+            # 在图像上半部分寻找耳朵
+            upper_half = gray[:height//2, :]
+            upper_mask = base_mask[:height//2, :]
+            
+            # 使用圆形检测器查找耳朵
+            circles = cv2.HoughCircles(
+                upper_half, cv2.HOUGH_GRADIENT, dp=1, minDist=30,
+                param1=50, param2=25, minRadius=15, maxRadius=40
+            )
+            
+            if circles is not None:
+                circles = np.uint16(np.around(circles))
+                for circle in circles[0, :]:
+                    # 检查是否在基础掩码内
+                    if upper_mask[circle[1], circle[0]] > 0:
+                        # 调整坐标
+                        circle_y = circle[1]  # 已经在upper_half中
+                        cv2.circle(ears_mask, (circle[0], circle_y), circle[2], 255, -1)
+            
+            return ears_mask if np.sum(ears_mask) > 0 else None
+            
+        except Exception as e:
+            logger.warning(f"熊猫耳朵检测失败: {str(e)}")
+            return None
+    
+    def _detect_chin_neck_area(self, image: np.ndarray, base_mask: np.ndarray) -> Optional[np.ndarray]:
+        """检测熊猫下巴/颈部区域，基于用户标记优化"""
+        try:
+            height, width = image.shape[:2]
+            
+            # 创建下巴/颈部检测掩码
+            chin_mask = np.zeros((height, width), dtype=np.uint8)
+            
+            # 基于用户标记的红色椭圆区域，优化检测策略
+            # 1. 在基础掩码的下半部分寻找下巴/颈部区域
+            lower_region = base_mask[height//2:, :]
+            
+            if np.sum(lower_region) > 0:
+                # 2. 使用更精确的轮廓检测
+                contours, _ = cv2.findContours(lower_region, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+                
+                if contours:
+                    # 3. 分析轮廓形状，找到符合下巴/颈部特征的轮廓
+                    chin_contours = self._filter_chin_neck_contours(contours, width, height//2)
+                    
+                    for contour in chin_contours:
+                        # 调整轮廓坐标（因为是从下半部分提取的）
+                        contour[:, :, 1] += height//2
+                        
+                        # 4. 使用椭圆拟合优化区域形状
+                        if len(contour) >= 5:  # 需要至少5个点才能拟合椭圆
+                            ellipse = cv2.fitEllipse(contour)
+                            # 创建椭圆掩码
+                            cv2.ellipse(chin_mask, ellipse, 255, -1)
+                        else:
+                            # 如果点太少，直接填充轮廓
+                            cv2.fillPoly(chin_mask, [contour], 255)
+                    
+                    # 5. 应用形态学操作使区域更平滑
+                    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
+                    chin_mask = cv2.morphologyEx(chin_mask, cv2.MORPH_CLOSE, kernel)
+                    chin_mask = cv2.morphologyEx(chin_mask, cv2.MORPH_OPEN, kernel)
+            
+            # 6. 如果检测到的区域太小，扩大搜索范围
+            if np.sum(chin_mask) < 1000:  # 如果区域太小
+                chin_mask = self._expand_chin_search_area(image, base_mask)
+            
+            return chin_mask if np.sum(chin_mask) > 0 else None
+            
+        except Exception as e:
+            logger.warning(f"下巴/颈部区域检测失败: {str(e)}")
+            return None
+    
+    def _filter_chin_neck_contours(self, contours: List, width: int, height: int) -> List:
+        """过滤出符合下巴/颈部特征的轮廓"""
+        try:
+            filtered_contours = []
+            
+            for contour in contours:
+                # 计算轮廓特征
+                area = cv2.contourArea(contour)
+                perimeter = cv2.arcLength(contour, True)
+                
+                if perimeter > 0:
+                    # 计算圆形度（下巴/颈部通常比较圆润）
+                    circularity = 4 * np.pi * area / (perimeter * perimeter)
+                    
+                    # 计算边界框
+                    x, y, w, h = cv2.boundingRect(contour)
+                    aspect_ratio = w / h if h > 0 else 0
+                    
+                    # 下巴/颈部的特征：
+                    # 1. 面积适中（不太小也不太大）
+                    # 2. 圆形度较高（比较圆润）
+                    # 3. 宽高比适中（不太扁也不太瘦）
+                    # 4. 位置在图像下半部分
+                    
+                    if (500 < area < 10000 and  # 面积适中
+                        circularity > 0.3 and    # 比较圆润
+                        0.5 < aspect_ratio < 2.0 and  # 宽高比适中
+                        y > height * 0.3):        # 在下半部分
+                        
+                        filtered_contours.append(contour)
+            
+            return filtered_contours
+            
+        except Exception as e:
+            logger.warning(f"轮廓过滤失败: {str(e)}")
+            return contours
+    
+    def _expand_chin_search_area(self, image: np.ndarray, base_mask: np.ndarray) -> np.ndarray:
+        """扩大下巴/颈部搜索区域"""
+        try:
+            height, width = image.shape[:2]
+            
+            # 创建扩展搜索掩码
+            expanded_mask = np.zeros((height, width), dtype=np.uint8)
+            
+            # 在更大的区域内搜索
+            search_region = base_mask[height//3:, :]  # 从1/3处开始搜索
+            
+            if np.sum(search_region) > 0:
+                # 使用更宽松的参数进行检测
+                contours, _ = cv2.findContours(search_region, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+                
+                if contours:
+                    # 选择最大的轮廓
+                    largest_contour = max(contours, key=cv2.contourArea)
+                    
+                    # 调整坐标
+                    largest_contour[:, :, 1] += height//3
+                    
+                    # 填充轮廓
+                    cv2.fillPoly(expanded_mask, [largest_contour], 255)
+                    
+                    # 应用形态学操作
+                    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
+                    expanded_mask = cv2.morphologyEx(expanded_mask, cv2.MORPH_CLOSE, kernel)
+            
+            return expanded_mask
+            
+        except Exception as e:
+            logger.warning(f"扩展搜索区域失败: {str(e)}")
+            return np.zeros((height, width), dtype=np.uint8)
+    
+    def _detect_general_living_subject(self, image: np.ndarray, subject_info: Dict[str, Any]) -> np.ndarray:
+        """通用生物体检测"""
+        try:
+            height, width = image.shape[:2]
+            
+            # 转换为灰度图
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            
+            # 使用GrabCut算法进行前景分割
+            mask = np.zeros((height, width), np.uint8)
+            bgd_model = np.zeros((1, 65), np.float64)
+            fgd_model = np.zeros((1, 65), np.float64)
+            
+            # 定义矩形区域（假设主体在中心）
+            rect = (width//8, height//8, width*3//4, height*3//4)
+            
+            cv2.grabCut(image, mask, rect, bgd_model, fgd_model, 5, cv2.GC_INIT_WITH_RECT)
+            
+            # 创建掩码
+            mask2 = np.where((mask == 2) | (mask == 0), 0, 1).astype('uint8')
+            
+            return mask2 * 255
+            
+        except Exception as e:
+            logger.warning(f"通用生物体检测失败: {str(e)}")
+            return self._fallback_mask(image)
     
     def _detect_static_subject(self, image: np.ndarray, subject_info: Dict[str, Any]) -> np.ndarray:
         """检测静物主体"""
@@ -365,22 +666,95 @@ class AIEnhancedProcessor:
         return self._detect_general_subject(image)
     
     def _enhance_panda_colors(self, image: np.ndarray) -> np.ndarray:
-        """熊猫专用颜色增强"""
-        # 强化黑白对比
-        enhanced = image.copy()
-        
-        # 转换到LAB色彩空间进行处理
-        lab = cv2.cvtColor(enhanced, cv2.COLOR_RGB2LAB)
-        l, a, b = cv2.split(lab)
-        
-        # 增强亮度对比
-        l = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8)).apply(l)
-        
-        # 重新组合
-        enhanced_lab = cv2.merge([l, a, b])
-        enhanced = cv2.cvtColor(enhanced_lab, cv2.COLOR_LAB2RGB)
-        
-        return enhanced
+        """专门针对熊猫的颜色增强算法"""
+        try:
+            # 转换为HSV色彩空间
+            hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+            
+            # 增强对比度
+            lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+            l, a, b = cv2.split(lab)
+            
+            # 使用CLAHE增强亮度通道
+            clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+            l = clahe.apply(l)
+            
+            # 重新合并LAB通道
+            lab = cv2.merge([l, a, b])
+            enhanced = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
+            
+            # 特别优化熊猫的黑白区域
+            enhanced = self._optimize_panda_black_white_areas(enhanced)
+            
+            # 优化下巴/颈部区域的颜色
+            enhanced = self._enhance_chin_neck_colors(enhanced)
+            
+            return enhanced
+            
+        except Exception as e:
+            logger.warning(f"熊猫颜色增强失败: {str(e)}")
+            return image
+    
+    def _optimize_panda_black_white_areas(self, image: np.ndarray) -> np.ndarray:
+        """优化熊猫黑白区域的颜色"""
+        try:
+            # 转换为灰度图
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            
+            # 检测黑色区域（熊猫的眼睛、耳朵、身体）
+            black_mask = gray < 80
+            
+            # 检测白色区域（熊猫的面部、身体）
+            white_mask = gray > 180
+            
+            # 增强黑色区域的深度
+            if np.sum(black_mask) > 0:
+                # 在黑色区域应用更深的黑色
+                image[black_mask] = [0, 0, 0]
+            
+            # 增强白色区域的亮度
+            if np.sum(white_mask) > 0:
+                # 在白色区域应用更亮的白色
+                image[white_mask] = [255, 255, 255]
+            
+            return image
+            
+        except Exception as e:
+            logger.warning(f"熊猫黑白区域优化失败: {str(e)}")
+            return image
+    
+    def _enhance_chin_neck_colors(self, image: np.ndarray) -> np.ndarray:
+        """增强下巴/颈部区域的颜色"""
+        try:
+            height, width = image.shape[:2]
+            
+            # 定义下巴/颈部区域（图像下半部分）
+            chin_neck_region = image[height//2:, :]
+            
+            # 转换为LAB色彩空间进行颜色增强
+            lab = cv2.cvtColor(chin_neck_region, cv2.COLOR_BGR2LAB)
+            l, a, b = cv2.split(lab)
+            
+            # 增强下巴/颈部区域的对比度
+            clahe = cv2.createCLAHE(clipLimit=1.5, tileGridSize=(4, 4))
+            l = clahe.apply(l)
+            
+            # 轻微增强饱和度
+            a = cv2.add(a, 5)
+            b = cv2.add(b, 5)
+            
+            # 重新合并通道
+            lab = cv2.merge([l, a, b])
+            enhanced_chin_neck = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
+            
+            # 将增强后的区域放回原图
+            image[height//2:, :] = enhanced_chin_neck
+            
+            return image
+            
+        except Exception as e:
+            logger.warning(f"下巴/颈部颜色增强失败: {str(e)}")
+            return image
     
     def _enhance_animal_colors(self, image: np.ndarray) -> np.ndarray:
         """动物专用颜色增强"""
@@ -393,3 +767,27 @@ class AIEnhancedProcessor:
         # 适度增强饱和度和对比度
         enhanced = cv2.convertScaleAbs(image, alpha=1.05, beta=5)
         return enhanced 
+
+    def _optimize_panda_boundaries(self, mask: np.ndarray) -> np.ndarray:
+        """优化熊猫区域边界"""
+        try:
+            # 使用形态学操作优化边界
+            kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+            
+            # 先进行开运算去除小噪声
+            mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
+            
+            # 再进行闭运算填充小孔洞
+            mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
+            
+            # 使用高斯模糊平滑边界
+            mask = cv2.GaussianBlur(mask, (3, 3), 0)
+            
+            # 重新二值化
+            _, mask = cv2.threshold(mask, 127, 255, cv2.THRESH_BINARY)
+            
+            return mask
+            
+        except Exception as e:
+            logger.warning(f"熊猫边界优化失败: {str(e)}")
+            return mask 
