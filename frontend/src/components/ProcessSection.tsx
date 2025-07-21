@@ -210,24 +210,96 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({
                     onConfigChange?.({ colorCount: value });
                   }}
                   marks={{
-                    10: { style: { color: '#1e293b', fontWeight: 500, textShadow: '0 1px 1px rgba(255, 255, 255, 0.6)' }, label: '10色' },
-                    12: { style: { color: '#1e293b', fontWeight: 500, textShadow: '0 1px 1px rgba(255, 255, 255, 0.6)' }, label: '12色' },
-                    14: { style: { color: '#1e293b', fontWeight: 500, textShadow: '0 1px 1px rgba(255, 255, 255, 0.6)' }, label: '14色' },
-                    16: { style: { color: '#1e293b', fontWeight: 500, textShadow: '0 1px 1px rgba(255, 255, 255, 0.6)' }, label: '16色' },
-                                          18: { style: { color: '#1e293b', fontWeight: 500, textShadow: '0 1px 1px rgba(255, 255, 255, 0.6)' }, label: '18色' },
-                    20: { style: { color: '#1e293b', fontWeight: 500, textShadow: '0 1px 1px rgba(255, 255, 255, 0.6)' }, label: '20色' },
+                    10: { 
+                      style: { 
+                        color: colorCount === 10 ? '#d4351c' : '#94a3b8', 
+                        fontWeight: colorCount === 10 ? 600 : 400,
+                        fontSize: '11px',
+                        marginTop: '10px',
+                        opacity: colorCount === 10 ? 1 : 0.7
+                      }, 
+                      label: '10色' 
+                    },
+                    12: { 
+                      style: { 
+                        color: colorCount === 12 ? '#d4351c' : '#94a3b8', 
+                        fontWeight: colorCount === 12 ? 600 : 400,
+                        fontSize: '11px',
+                        marginTop: '10px',
+                        opacity: colorCount === 12 ? 1 : 0.7
+                      }, 
+                      label: '12色' 
+                    },
+                    14: { 
+                      style: { 
+                        color: colorCount === 14 ? '#d4351c' : '#94a3b8', 
+                        fontWeight: colorCount === 14 ? 600 : 400,
+                        fontSize: '11px',
+                        marginTop: '10px',
+                        opacity: colorCount === 14 ? 1 : 0.7
+                      }, 
+                      label: '14色' 
+                    },
+                    16: { 
+                      style: { 
+                        color: colorCount === 16 ? '#d4351c' : '#94a3b8', 
+                        fontWeight: colorCount === 16 ? 600 : 400,
+                        fontSize: '11px',
+                        marginTop: '10px',
+                        opacity: colorCount === 16 ? 1 : 0.7
+                      }, 
+                      label: '16色' 
+                    },
+                    18: { 
+                      style: { 
+                        color: colorCount === 18 ? '#d4351c' : '#94a3b8', 
+                        fontWeight: colorCount === 18 ? 600 : 400,
+                        fontSize: '11px',
+                        marginTop: '10px',
+                        opacity: colorCount === 18 ? 1 : 0.7
+                      }, 
+                      label: '18色' 
+                    },
+                    20: { 
+                      style: { 
+                        color: colorCount === 20 ? '#d4351c' : '#94a3b8', 
+                        fontWeight: colorCount === 20 ? 600 : 400,
+                        fontSize: '11px',
+                        marginTop: '10px',
+                        opacity: colorCount === 20 ? 1 : 0.7
+                      }, 
+                      label: '20色' 
+                    }
                   }}
                   included={false}
                   disabled={disabled}
+                  trackStyle={{ backgroundColor: '#e2e8f0', height: 4 }}
+                  handleStyle={{ 
+                    borderColor: '#d4351c', 
+                    backgroundColor: '#fff',
+                    boxShadow: '0 2px 8px rgba(212, 53, 28, 0.4), 0 0 0 2px rgba(212, 53, 28, 0.1)',
+                    width: 18,
+                    height: 18,
+                    marginTop: -7,
+                    borderWidth: 2
+                  }}
                 />
               </div>
             </Col>
             <Col span={3} style={{ textAlign: 'right' }}>
-              <Tag className="liquid-tag" style={{ 
-                color: '#1e293b',
-                fontWeight: 600,
-                textShadow: '0 1px 1px rgba(255, 255, 255, 0.5)'
-              }}>
+              <Tag 
+                style={{ 
+                  color: '#d4351c',
+                  backgroundColor: '#fef2f2',
+                  fontWeight: 600,
+                  fontSize: '12px',
+                  padding: '1px 6px',
+                  borderRadius: '16px',
+                  border: '1px solid #d4351c',
+                  transition: 'all 0.2s ease',
+                  opacity: 0.8
+                }}
+              >
                 {colorCount}色
               </Tag>
             </Col>

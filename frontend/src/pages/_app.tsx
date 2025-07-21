@@ -3,6 +3,8 @@ import { ConfigProvider, theme } from 'antd';
 import zhCN from 'antd/locale/zh_CN';
 import 'antd/dist/reset.css';
 import '../styles/globals.css';
+import { StagewiseToolbar } from '@stagewise/toolbar-react';
+import ReactPlugin from '@stagewise-plugins/react';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -29,6 +31,13 @@ export default function App({ Component, pageProps }: AppProps) {
       }}
     >
       <Component {...pageProps} />
+      {process.env.NODE_ENV === 'development' && (
+        <StagewiseToolbar
+          config={{
+            plugins: [ReactPlugin],
+          }}
+        />
+      )}
     </ConfigProvider>
   );
 } 

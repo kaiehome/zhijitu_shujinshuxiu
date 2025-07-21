@@ -784,4 +784,68 @@ body::before {
       transparent 8px);
   pointer-events: none;
   border-radius: inherit;
+}
+
+/* 颜色数量选择器增强样式 */
+.color-count-tag {
+  position: relative;
+  overflow: hidden;
+}
+
+.color-count-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    transparent 100%);
+  transition: left 0.6s ease;
+}
+
+.color-count-tag:hover::before {
+  left: 100%;
+}
+
+.color-count-tag:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 4px 16px rgba(212, 53, 28, 0.5) !important;
+}
+
+/* 滑块标记悬停效果 */
+.ant-slider-mark-text {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ant-slider-mark-text:hover {
+  transform: scale(1.15);
+  text-shadow: 0 2px 4px rgba(212, 53, 28, 0.4) !important;
+}
+
+/* 滑块轨道增强 */
+.ant-slider-track {
+  background: linear-gradient(90deg, #d4351c, #ff6b6b) !important;
+  height: 4px !important;
+  border-radius: 2px !important;
+}
+
+/* 滑块手柄增强 */
+.ant-slider-handle {
+  border: 2px solid #d4351c !important;
+  background: #fff !important;
+  box-shadow: 0 2px 8px rgba(212, 53, 28, 0.4) !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-slider-handle:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(212, 53, 28, 0.6) !important;
+}
+
+.ant-slider-handle:focus {
+  box-shadow: 0 0 0 3px rgba(212, 53, 28, 0.2) !important;
 } 
