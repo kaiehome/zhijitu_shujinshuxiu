@@ -1,0 +1,182 @@
+[
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "method": "panda_optimized"
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.8663,
+      "目标色彩数": 155782,
+      "生成色彩数": 101,
+      "像素总数": 377598,
+      "像素差异数": 377590,
+      "边界差异像素数": 99739
+    },
+    "result_img": "panda_optimized_results/result_n16_k3_panda_optimized.png",
+    "diff_img": "panda_optimized_results/diff_n16_k3_panda_optimized.png",
+    "color_table": "panda_optimized_results/color_table_n16_k3_panda_optimized.csv",
+    "actual_colors": 115
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "method": "panda_optimized"
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.8647,
+      "目标色彩数": 155782,
+      "生成色彩数": 203,
+      "像素总数": 377598,
+      "像素差异数": 377590,
+      "边界差异像素数": 99920
+    },
+    "result_img": "panda_optimized_results/result_n16_k5_panda_optimized.png",
+    "diff_img": "panda_optimized_results/diff_n16_k5_panda_optimized.png",
+    "color_table": "panda_optimized_results/color_table_n16_k5_panda_optimized.csv",
+    "actual_colors": 232
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "method": "panda_optimized"
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.8663,
+      "目标色彩数": 155782,
+      "生成色彩数": 374,
+      "像素总数": 377598,
+      "像素差异数": 377590,
+      "边界差异像素数": 99798
+    },
+    "result_img": "panda_optimized_results/result_n16_k7_panda_optimized.png",
+    "diff_img": "panda_optimized_results/diff_n16_k7_panda_optimized.png",
+    "color_table": "panda_optimized_results/color_table_n16_k7_panda_optimized.csv",
+    "actual_colors": 419
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "method": "panda_optimized"
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.8627,
+      "目标色彩数": 155782,
+      "生成色彩数": 119,
+      "像素总数": 377598,
+      "像素差异数": 377590,
+      "边界差异像素数": 100091
+    },
+    "result_img": "panda_optimized_results/result_n18_k3_panda_optimized.png",
+    "diff_img": "panda_optimized_results/diff_n18_k3_panda_optimized.png",
+    "color_table": "panda_optimized_results/color_table_n18_k3_panda_optimized.csv",
+    "actual_colors": 132
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "method": "panda_optimized"
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.8663,
+      "目标色彩数": 155782,
+      "生成色彩数": 174,
+      "像素总数": 377598,
+      "像素差异数": 377590,
+      "边界差异像素数": 99752
+    },
+    "result_img": "panda_optimized_results/result_n18_k5_panda_optimized.png",
+    "diff_img": "panda_optimized_results/diff_n18_k5_panda_optimized.png",
+    "color_table": "panda_optimized_results/color_table_n18_k5_panda_optimized.csv",
+    "actual_colors": 199
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "method": "panda_optimized"
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.8647,
+      "目标色彩数": 155782,
+      "生成色彩数": 313,
+      "像素总数": 377598,
+      "像素差异数": 377590,
+      "边界差异像素数": 99824
+    },
+    "result_img": "panda_optimized_results/result_n18_k7_panda_optimized.png",
+    "diff_img": "panda_optimized_results/diff_n18_k7_panda_optimized.png",
+    "color_table": "panda_optimized_results/color_table_n18_k7_panda_optimized.csv",
+    "actual_colors": 356
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "method": "panda_optimized"
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.8627,
+      "目标色彩数": 155782,
+      "生成色彩数": 114,
+      "像素总数": 377598,
+      "像素差异数": 377590,
+      "边界差异像素数": 100131
+    },
+    "result_img": "panda_optimized_results/result_n20_k3_panda_optimized.png",
+    "diff_img": "panda_optimized_results/diff_n20_k3_panda_optimized.png",
+    "color_table": "panda_optimized_results/color_table_n20_k3_panda_optimized.csv",
+    "actual_colors": 125
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "method": "panda_optimized"
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.8655,
+      "目标色彩数": 155782,
+      "生成色彩数": 245,
+      "像素总数": 377598,
+      "像素差异数": 377590,
+      "边界差异像素数": 99728
+    },
+    "result_img": "panda_optimized_results/result_n20_k5_panda_optimized.png",
+    "diff_img": "panda_optimized_results/diff_n20_k5_panda_optimized.png",
+    "color_table": "panda_optimized_results/color_table_n20_k5_panda_optimized.csv",
+    "actual_colors": 283
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "method": "panda_optimized"
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.8648,
+      "目标色彩数": 155782,
+      "生成色彩数": 296,
+      "像素总数": 377598,
+      "像素差异数": 377590,
+      "边界差异像素数": 99899
+    },
+    "result_img": "panda_optimized_results/result_n20_k7_panda_optimized.png",
+    "diff_img": "panda_optimized_results/diff_n20_k7_panda_optimized.png",
+    "color_table": "panda_optimized_results/color_table_n20_k7_panda_optimized.csv",
+    "actual_colors": 339
+  }
+]

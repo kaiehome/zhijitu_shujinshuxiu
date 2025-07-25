@@ -1,0 +1,17 @@
+{
+  "optimization_params": {
+    "color_clusters": 16,
+    "edge_smoothness": 1.5,
+    "texture_detail_level": 0.8,
+    "pattern_continuity_weight": 0.6,
+    "noise_reduction": 0.3,
+    "contrast_enhancement": 1.2
+  },
+  "quality_improvements": {
+    "color_diversity": 11.121951219512194,
+    "edge_clarity": -0.166289592760181,
+    "texture_complexity": 0.16933796522561217,
+    "contrast": -0.21277192086253707
+  },
+  "processing_time": 0.9277350902557373
+}

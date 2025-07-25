@@ -11,9 +11,11 @@ from datetime import datetime, timedelta
 from typing import Optional, Dict, Any
 from pathlib import Path
 import json
+import time
+import numpy as np
 
 import aiofiles
-from fastapi import FastAPI, File, UploadFile, HTTPException, BackgroundTasks, Request, Form
+from fastapi import FastAPI, File, UploadFile, HTTPException, BackgroundTasks, Request, Form, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from typing import Optional
@@ -34,6 +36,28 @@ from models import (
 from image_processor import SichuanBrocadeProcessor
 from simple_professional_generator import SimpleProfessionalGenerator
 from structural_professional_generator import StructuralProfessionalGenerator
+from professional_recognition_generator import ProfessionalRecognitionGenerator
+from advanced_professional_generator import AdvancedProfessionalGenerator
+from ultimate_professional_generator import UltimateProfessionalGenerator
+from local_ai_generator import LocalAIGenerator
+from tongyi_qianwen_api import get_tongyi_api, init_tongyi_api
+
+# 导入图生图生成器
+from image_to_image_generator import ImageToImageGenerator
+
+# 导入通义千问Composer API
+from tongyi_composer_api import get_composer_api, init_composer_api
+
+# 初始化图生图生成器
+img2img_generator = ImageToImageGenerator(
+    color_count=16,
+    use_ai_segmentation=True,
+    use_feature_detection=True,
+    style_preset="weaving_machine"
+)
+
+# 初始化通义千问Composer API
+composer_api = get_composer_api()
 
 # 配置日志系统
 def setup_logging():
@@ -142,11 +166,34 @@ initialize_system()
 # 挂载静态文件
 app.mount("/outputs", StaticFiles(directory=str(config.OUTPUT_DIR)), name="outputs")
 
-# 使用极简版本作为默认处理器（结构保持性能最佳）
-processor = SimpleProfessionalGenerator()
+# 使用专业真实识别图生成器作为默认处理器（更自然细腻的效果）
+processor = ProfessionalRecognitionGenerator()
 
 # 在app初始化后添加结构化生成器
 structural_generator = StructuralProfessionalGenerator()
+
+# 初始化专业识别图生成器
+professional_generator = ProfessionalRecognitionGenerator()
+
+# 初始化高级专业识别图生成器
+advanced_generator = AdvancedProfessionalGenerator()
+
+# 初始化终极专业识别图生成器
+ultimate_generator = UltimateProfessionalGenerator()
+
+# 初始化本地AI增强生成器
+local_ai_generator = LocalAIGenerator()
+
+# 初始化AI大模型
+from ai_model_api import get_ai_model
+ai_model = get_ai_model()
+
+# 初始化简化的AI模型
+from simple_ai_api import get_simple_ai_model
+simple_ai_model = get_simple_ai_model()
+
+# 初始化通义千问API
+tongyi_api = init_tongyi_api()
 
 # 任务状态管理
 class JobManager:
@@ -425,10 +472,21 @@ async def process_image_api(
         
         logger.info(f"文件已保存: {file_path}")
         
-        # 使用极简版本处理图像（性能最佳）
-        professional_path, comparison_path, processing_time = processor.generate_professional_image(
-            file_path, job_id
-        )
+        # 使用专业真实识别图处理器（更自然细腻的效果）
+        start_time = time.time()
+        professional_path = processor.generate_professional_recognition(file_path)
+        processing_time = time.time() - start_time
+        
+        # 创建对比图路径
+        comparison_path = professional_path.replace('_professional_recognition.', '_comparison.')
+        
+        # 创建对比图
+        original = cv2.imread(file_path)
+        processed = cv2.imread(professional_path)
+        if original is not None and processed is not None:
+            # 创建对比图
+            comparison = np.hstack([original, processed])
+            cv2.imwrite(comparison_path, comparison)
         
         logger.info(f"图像处理完成，耗时: {processing_time:.2f}秒")
         
@@ -436,13 +494,13 @@ async def process_image_api(
             "status": "completed",
             "job_id": job_id,
             "processing_time": round(processing_time, 2),
-            "professional_image_url": f"/outputs/{job_id}/{job_id}_simple_professional.png",
-            "comparison_image_url": f"/outputs/{job_id}/{job_id}_simple_comparison.png",
+            "professional_image_url": f"/{professional_path}",
+            "comparison_image_url": f"/{comparison_path}",
             "parameters": {
                 "color_count": color_count,
                 "edge_enhancement": edge_enhancement,
                 "noise_reduction": noise_reduction,
-                "generator_type": "simple_professional"
+                "generator_type": "professional_recognition"
             },
             "message": f"专业织机识别图像生成成功！耗时: {processing_time:.2f}秒"
         }
@@ -700,6 +758,591 @@ async def process_structural_image(
         error_msg = f"结构化专业识别图处理失败: {str(e)}"
         logger.error(error_msg, exc_info=True)
         raise HTTPException(status_code=500, detail=error_msg)
+
+@app.post("/api/generate-professional-recognition")
+async def generate_professional_recognition(file: UploadFile = File(...)):
+    """
+    生成专业真实识别图
+    """
+    try:
+        # 创建上传目录
+        os.makedirs("uploads", exist_ok=True)
+        
+        # 保存上传的文件
+        timestamp = int(time.time() * 1000)
+        filename = f"{timestamp}_{file.filename}"
+        file_path = f"uploads/{filename}"
+        
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        # 生成专业识别图
+        output_path = professional_generator.generate_professional_recognition(file_path)
+        
+        # 返回结果
+        return {
+            "success": True,
+            "message": "专业识别图生成成功",
+            "original_image": file_path,
+            "processed_image": output_path,
+            "timestamp": timestamp
+        }
+        
+    except Exception as e:
+        logger.error(f"生成专业识别图时出错: {str(e)}")
+        return {
+            "success": False,
+            "message": f"生成失败: {str(e)}"
+        }
+
+@app.post("/api/generate-advanced-professional")
+async def generate_advanced_professional(file: UploadFile = File(...)):
+    """
+    生成高级专业真实识别图
+    """
+    try:
+        # 创建上传目录
+        os.makedirs("uploads", exist_ok=True)
+        
+        # 保存上传的文件
+        timestamp = int(time.time() * 1000)
+        filename = f"{timestamp}_{file.filename}"
+        file_path = f"uploads/{filename}"
+        
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        # 生成高级专业识别图
+        output_path = advanced_generator.generate_advanced_professional(file_path)
+        
+        # 返回结果
+        return {
+            "success": True,
+            "message": "高级专业识别图生成成功",
+            "original_image": file_path,
+            "processed_image": output_path,
+            "timestamp": timestamp
+        }
+        
+    except Exception as e:
+        logger.error(f"生成高级专业识别图时出错: {str(e)}")
+        return {
+            "success": False,
+            "message": f"生成失败: {str(e)}"
+        }
+
+@app.post("/api/generate-ultimate-professional")
+async def generate_ultimate_professional(file: UploadFile = File(...)):
+    """
+    生成终极专业真实识别图
+    """
+    try:
+        # 创建上传目录
+        os.makedirs("uploads", exist_ok=True)
+        
+        # 保存上传的文件
+        timestamp = int(time.time() * 1000)
+        filename = f"{timestamp}_{file.filename}"
+        file_path = f"uploads/{filename}"
+        
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        # 生成终极专业识别图
+        output_path = ultimate_generator.generate_ultimate_professional(file_path)
+        
+        # 返回结果
+        return {
+            "success": True,
+            "message": "终极专业识别图生成成功",
+            "original_image": file_path,
+            "processed_image": output_path,
+            "timestamp": timestamp
+        }
+        
+    except Exception as e:
+        logger.error(f"生成终极专业识别图时出错: {str(e)}")
+        return {
+            "success": False,
+            "message": f"生成失败: {str(e)}"
+        }
+
+@app.post("/api/generate-local-ai-enhanced")
+async def generate_local_ai_enhanced(file: UploadFile = File(...)):
+    """
+    生成本地AI增强的专业真实识别图
+    """
+    try:
+        # 创建上传目录
+        os.makedirs("uploads", exist_ok=True)
+        
+        # 保存上传的文件
+        timestamp = int(time.time() * 1000)
+        filename = f"{timestamp}_{file.filename}"
+        file_path = f"uploads/{filename}"
+        
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        # 生成本地AI增强图像
+        output_path = local_ai_generator.generate_local_ai_enhanced_image(file_path)
+        
+        # 读取生成的文件
+        with open(output_path, "rb") as f:
+            output_content = f.read()
+        
+        # 返回生成的图像
+        return Response(
+            content=output_content,
+            media_type="image/jpeg",
+            headers={
+                "Content-Disposition": f"attachment; filename={os.path.basename(output_path)}"
+            }
+        )
+        
+    except Exception as e:
+        logger.error(f"本地AI增强处理失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"本地AI增强处理失败: {str(e)}")
+
+@app.post("/api/generate-ai-model")
+async def generate_ai_model(file: UploadFile = File(...)):
+    """
+    使用AI大模型生成织机识别图
+    """
+    try:
+        # 检查AI模型是否可用
+        if not ai_model.is_model_available():
+            raise HTTPException(status_code=503, detail="AI模型未加载，请先训练模型")
+        
+        os.makedirs("uploads", exist_ok=True)
+        timestamp = int(time.time() * 1000)
+        filename = f"{timestamp}_{file.filename}"
+        file_path = f"uploads/{filename}"
+        
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        # 使用AI模型生成图片
+        output_path = ai_model.generate_image(file_path)
+        
+        if output_path is None:
+            raise HTTPException(status_code=500, detail="AI模型生成失败")
+        
+        with open(output_path, "rb") as f:
+            output_content = f.read()
+        
+        return Response(
+            content=output_content,
+            media_type="image/jpeg",
+            headers={
+                "Content-Disposition": f"attachment; filename={os.path.basename(output_path)}"
+            }
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"AI模型生成失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"AI模型生成失败: {str(e)}")
+
+@app.get("/api/ai-model-status")
+async def get_ai_model_status():
+    """
+    获取AI模型状态
+    """
+    try:
+        model_info = ai_model.get_model_info()
+        return JSONResponse(content=model_info)
+    except Exception as e:
+        logger.error(f"获取AI模型状态失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"获取AI模型状态失败: {str(e)}")
+
+@app.post("/api/generate-simple-ai")
+async def generate_simple_ai(file: UploadFile = File(...)):
+    """
+    使用简化的AI模型生成织机识别图
+    """
+    try:
+        # 检查简化AI模型是否可用
+        if not simple_ai_model.is_model_available():
+            raise HTTPException(status_code=503, detail="简化AI模型未加载")
+        
+        os.makedirs("uploads", exist_ok=True)
+        timestamp = int(time.time() * 1000)
+        filename = f"{timestamp}_{file.filename}"
+        file_path = f"uploads/{filename}"
+        
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        # 使用简化AI模型生成图片
+        output_path = simple_ai_model.generate_image(file_path)
+        
+        if output_path is None:
+            raise HTTPException(status_code=500, detail="简化AI模型生成失败")
+        
+        with open(output_path, "rb") as f:
+            output_content = f.read()
+        
+        return Response(
+            content=output_content,
+            media_type="image/jpeg",
+            headers={
+                "Content-Disposition": f"attachment; filename={os.path.basename(output_path)}"
+            }
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"简化AI模型生成失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"简化AI模型生成失败: {str(e)}")
+
+@app.get("/api/simple-ai-status")
+async def get_simple_ai_status():
+    """
+    获取简化AI模型状态
+    """
+    try:
+        model_info = simple_ai_model.get_model_info()
+        return JSONResponse(content=model_info)
+    except Exception as e:
+        logger.error(f"获取简化AI模型状态失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"获取简化AI模型状态失败: {str(e)}")
+
+@app.post("/api/generate-tongyi-qianwen")
+async def generate_tongyi_qianwen(file: UploadFile = File(...)):
+    """
+    使用通义千问大模型生成织机识别图
+    """
+    try:
+        # 检查通义千问API是否可用
+        api_status = tongyi_api.get_api_status()
+        if not api_status["api_available"]:
+            raise HTTPException(status_code=503, detail="通义千问API未配置，请设置TONGYI_API_KEY环境变量")
+        
+        os.makedirs("uploads", exist_ok=True)
+        timestamp = int(time.time() * 1000)
+        filename = f"{timestamp}_{file.filename}"
+        file_path = f"uploads/{filename}"
+        
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        # 使用通义千问生成图片
+        output_path = tongyi_api.generate_loom_recognition_image(file_path)
+        
+        if output_path is None:
+            raise HTTPException(status_code=500, detail="通义千问生成失败")
+        
+        with open(output_path, "rb") as f:
+            output_content = f.read()
+        
+        return Response(
+            content=output_content,
+            media_type="image/jpeg",
+            headers={
+                "Content-Disposition": f"attachment; filename={os.path.basename(output_path)}"
+            }
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"通义千问生成失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"通义千问生成失败: {str(e)}")
+
+@app.post("/api/enhance-tongyi-qianwen")
+async def enhance_tongyi_qianwen(file: UploadFile = File(...)):
+    """
+    使用通义千问大模型增强图片质量
+    """
+    try:
+        # 检查通义千问API是否可用
+        api_status = tongyi_api.get_api_status()
+        if not api_status["api_available"]:
+            raise HTTPException(status_code=503, detail="通义千问API未配置，请设置TONGYI_API_KEY环境变量")
+        
+        os.makedirs("uploads", exist_ok=True)
+        timestamp = int(time.time() * 1000)
+        filename = f"{timestamp}_{file.filename}"
+        file_path = f"uploads/{filename}"
+        
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        # 使用通义千问增强图片
+        output_path = tongyi_api.enhance_image_quality(file_path)
+        
+        if output_path is None:
+            raise HTTPException(status_code=500, detail="通义千问增强失败")
+        
+        with open(output_path, "rb") as f:
+            output_content = f.read()
+        
+        return Response(
+            content=output_content,
+            media_type="image/jpeg",
+            headers={
+                "Content-Disposition": f"attachment; filename={os.path.basename(output_path)}"
+            }
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"通义千问增强失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"通义千问增强失败: {str(e)}")
+
+@app.get("/api/tongyi-qianwen-status")
+async def get_tongyi_qianwen_status():
+    """
+    获取通义千问API状态
+    """
+    try:
+        api_status = tongyi_api.get_api_status()
+        return JSONResponse(content=api_status)
+    except Exception as e:
+        logger.error(f"获取通义千问状态失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"获取通义千问状态失败: {str(e)}")
+
+@app.post("/api/generate-image-to-image")
+async def generate_image_to_image(
+    file: UploadFile = File(...),
+    style_preset: str = Form("weaving_machine"),
+    color_count: int = Form(16)
+):
+    """
+    纯图生图API - 上传原图，无需文字输入，直接生成织机识别图
+    """
+    try:
+        # 检查文件类型
+        if not file.content_type or not file.content_type.startswith('image/'):
+            raise HTTPException(status_code=400, detail="只支持图片文件")
+        
+        # 保存上传文件
+        os.makedirs("uploads", exist_ok=True)
+        timestamp = int(time.time() * 1000)
+        filename = f"{timestamp}_{file.filename}"
+        file_path = f"uploads/{filename}"
+        
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        logger.info(f"开始图生图处理: {file_path}")
+        
+        # 使用图生图生成器处理
+        output_path = img2img_generator.generate_loom_recognition_image(
+            source_image_path=file_path,
+            style_preset=style_preset
+        )
+        
+        if output_path is None:
+            raise HTTPException(status_code=500, detail="图生图处理失败")
+        
+        # 返回生成的图片
+        with open(output_path, "rb") as f:
+            output_content = f.read()
+        
+        return Response(
+            content=output_content,
+            media_type="image/jpeg",
+            headers={
+                "Content-Disposition": f"attachment; filename={os.path.basename(output_path)}"
+            }
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"图生图处理失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"图生图处理失败: {str(e)}")
+
+@app.get("/api/image-to-image-styles")
+async def get_image_to_image_styles():
+    """
+    获取可用的图生图风格预设
+    """
+    try:
+        styles = img2img_generator.get_available_styles()
+        info = img2img_generator.get_processing_info()
+        
+        return {
+            "available_styles": styles,
+            "current_style": info["current_style"],
+            "processing_info": info
+        }
+    except Exception as e:
+        logger.error(f"获取风格预设失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"获取风格预设失败: {str(e)}")
+
+@app.post("/api/add-custom-style")
+async def add_custom_style(
+    style_name: str = Form(...),
+    style_config: str = Form(...)  # JSON字符串
+):
+    """
+    添加自定义图生图风格
+    """
+    try:
+        config = json.loads(style_config)
+        img2img_generator.add_custom_style(style_name, config)
+        
+        return {
+            "message": f"自定义风格 '{style_name}' 添加成功",
+            "available_styles": img2img_generator.get_available_styles()
+        }
+    except json.JSONDecodeError:
+        raise HTTPException(status_code=400, detail="风格配置必须是有效的JSON格式")
+    except Exception as e:
+        logger.error(f"添加自定义风格失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"添加自定义风格失败: {str(e)}")
+
+@app.post("/api/generate-composer-image-to-image")
+async def generate_composer_image_to_image(
+    file: UploadFile = File(...),
+    prompt: str = Form(""),
+    style_preset: str = Form("weaving_machine")
+):
+    """
+    使用通义千问Composer模型进行图生图
+    基于Qwen-VL + Composer模型实现图生图功能
+    """
+    try:
+        # 检查通义千问Composer API是否可用
+        api_status = composer_api.get_api_status()
+        if not api_status["api_available"]:
+            raise HTTPException(status_code=503, detail="通义千问Composer API未配置，请设置TONGYI_API_KEY环境变量")
+        
+        # 检查文件类型
+        if not file.content_type or not file.content_type.startswith('image/'):
+            raise HTTPException(status_code=400, detail="只支持图片文件")
+        
+        # 保存上传文件
+        os.makedirs("uploads", exist_ok=True)
+        timestamp = int(time.time() * 1000)
+        filename = f"{timestamp}_{file.filename}"
+        file_path = f"uploads/{filename}"
+        
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        logger.info(f"开始Composer图生图处理: {file_path}")
+        
+        # 使用Composer API生成图片
+        output_path = composer_api.generate_image_to_image(
+            source_image_path=file_path,
+            prompt=prompt,
+            style_preset=style_preset
+        )
+        
+        if output_path is None:
+            raise HTTPException(status_code=500, detail="Composer图生图处理失败")
+        
+        # 返回生成的图片
+        with open(output_path, "rb") as f:
+            output_content = f.read()
+        
+        return Response(
+            content=output_content,
+            media_type="image/jpeg",
+            headers={
+                "Content-Disposition": f"attachment; filename={os.path.basename(output_path)}"
+            }
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Composer图生图处理失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Composer图生图处理失败: {str(e)}")
+
+@app.get("/api/composer-status")
+async def get_composer_status():
+    """
+    获取通义千问Composer API状态
+    """
+    try:
+        api_status = composer_api.get_api_status()
+        return {
+            "api_status": api_status,
+            "processing_info": {
+                "model": api_status["model"],
+                "api_available": api_status["api_available"],
+                "available_styles": ["weaving_machine", "embroidery", "pixel_art", "traditional", "modern"],
+                "current_style": "weaving_machine"
+            },
+            "available_styles": ["weaving_machine", "embroidery", "pixel_art", "traditional", "modern"]
+        }
+    except Exception as e:
+        logger.error(f"获取Composer状态失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"获取Composer状态失败: {str(e)}")
+
+@app.post("/api/generate-composer-with-custom-prompt")
+async def generate_composer_with_custom_prompt(
+    file: UploadFile = File(...),
+    custom_prompt: str = Form(...),
+    style_preset: str = Form("weaving_machine")
+):
+    """
+    使用自定义提示词进行Composer图生图
+    """
+    try:
+        # 检查通义千问Composer API是否可用
+        api_status = composer_api.get_api_status()
+        if not api_status["api_available"]:
+            raise HTTPException(status_code=503, detail="通义千问Composer API未配置，请设置TONGYI_API_KEY环境变量")
+        
+        # 检查文件类型
+        if not file.content_type or not file.content_type.startswith('image/'):
+            raise HTTPException(status_code=400, detail="只支持图片文件")
+        
+        # 保存上传文件
+        os.makedirs("uploads", exist_ok=True)
+        timestamp = int(time.time() * 1000)
+        filename = f"{timestamp}_{file.filename}"
+        file_path = f"uploads/{filename}"
+        
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        logger.info(f"开始Composer自定义提示词图生图处理: {file_path}")
+        logger.info(f"自定义提示词: {custom_prompt}")
+        
+        # 使用Composer API生成图片
+        output_path = composer_api.generate_image_to_image(
+            source_image_path=file_path,
+            prompt=custom_prompt,
+            style_preset=style_preset
+        )
+        
+        if output_path is None:
+            raise HTTPException(status_code=500, detail="Composer自定义提示词图生图处理失败")
+        
+        # 返回生成的图片
+        with open(output_path, "rb") as f:
+            output_content = f.read()
+        
+        return Response(
+            content=output_content,
+            media_type="image/jpeg",
+            headers={
+                "Content-Disposition": f"attachment; filename={os.path.basename(output_path)}"
+            }
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Composer自定义提示词图生图处理失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Composer自定义提示词图生图处理失败: {str(e)}")
 
 if __name__ == "__main__":
     import uvicorn

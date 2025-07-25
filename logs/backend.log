@@ -1,64 +1,27 @@
 INFO:     Will watch for changes in these directories: ['/Users/wangkai/Documents/GitHub/zhijitu_shujinshuxiu/backend']
-ERROR:    [Errno 48] Address already in use
-2025-07-21 15:40:43,840 - main - INFO - [main.py:128] - 目录已准备: uploads
-2025-07-21 15:40:43,841 - main - INFO - [main.py:128] - 目录已准备: outputs
-2025-07-21 15:40:43,841 - main - INFO - [main.py:134] - 系统初始化完成
-2025-07-21 15:40:43,842 - simple_professional_generator - INFO - [simple_professional_generator.py:31] - 极简专业织机生成器已初始化
-2025-07-21 15:40:43,843 - structural_professional_generator - INFO - [structural_professional_generator.py:34] - 🔧 结构化专业识别图生成器已初始化
-2025-07-21 15:40:43,843 - main - INFO - [main.py:227] - 🔄 正在从文件系统恢复任务状态...
-2025-07-21 15:40:43,846 - main - INFO - [main.py:265] - ✅ 成功恢复 3 个任务状态
-2025-07-21 15:40:43,875 - main - INFO - [main.py:289] - 🧵 蜀锦蜀绣AI打样图生成工具启动
-2025-07-21 15:41:58,470 - main - INFO - [main.py:295] - 🛑 蜀锦蜀绣AI打样图生成工具关闭
-2025-07-21 15:42:01,106 - main - INFO - [main.py:128] - 目录已准备: uploads
-2025-07-21 15:42:01,106 - main - INFO - [main.py:128] - 目录已准备: outputs
-2025-07-21 15:42:01,106 - main - INFO - [main.py:134] - 系统初始化完成
-2025-07-21 15:42:01,106 - simple_professional_generator - INFO - [simple_professional_generator.py:31] - 极简专业织机生成器已初始化
-2025-07-21 15:42:01,106 - structural_professional_generator - INFO - [structural_professional_generator.py:34] - 🔧 结构化专业识别图生成器已初始化
-2025-07-21 15:42:01,106 - main - INFO - [main.py:227] - 🔄 正在从文件系统恢复任务状态...
-2025-07-21 15:42:01,107 - main - INFO - [main.py:265] - ✅ 成功恢复 3 个任务状态
-2025-07-21 15:42:01,124 - main - INFO - [main.py:289] - 🧵 蜀锦蜀绣AI打样图生成工具启动
-2025-07-21 15:44:55,059 - main - INFO - [main.py:295] - 🛑 蜀锦蜀绣AI打样图生成工具关闭
-2025-07-21 15:44:57,983 - main - INFO - [main.py:128] - 目录已准备: uploads
-2025-07-21 15:44:57,983 - main - INFO - [main.py:128] - 目录已准备: outputs
-2025-07-21 15:44:57,983 - main - INFO - [main.py:134] - 系统初始化完成
-2025-07-21 15:44:57,983 - simple_professional_generator - INFO - [simple_professional_generator.py:31] - 极简专业织机生成器已初始化
-2025-07-21 15:44:57,983 - structural_professional_generator - INFO - [structural_professional_generator.py:34] - 🔧 结构化专业识别图生成器已初始化
-2025-07-21 15:44:57,983 - main - INFO - [main.py:227] - 🔄 正在从文件系统恢复任务状态...
-2025-07-21 15:44:57,984 - main - INFO - [main.py:265] - ✅ 成功恢复 3 个任务状态
-2025-07-21 15:44:58,002 - main - INFO - [main.py:289] - 🧵 蜀锦蜀绣AI打样图生成工具启动
-2025-07-21 15:50:29,929 - main - INFO - [main.py:295] - 🛑 蜀锦蜀绣AI打样图生成工具关闭
-2025-07-21 15:50:32,714 - main - INFO - [main.py:128] - 目录已准备: uploads
-2025-07-21 15:50:32,714 - main - INFO - [main.py:128] - 目录已准备: outputs
-2025-07-21 15:50:32,714 - main - INFO - [main.py:134] - 系统初始化完成
-2025-07-21 15:50:32,714 - simple_professional_generator - INFO - [simple_professional_generator.py:31] - 极简专业织机生成器已初始化
-2025-07-21 15:50:32,714 - structural_professional_generator - INFO - [structural_professional_generator.py:34] - 🔧 结构化专业识别图生成器已初始化
-2025-07-21 15:50:32,714 - main - INFO - [main.py:227] - 🔄 正在从文件系统恢复任务状态...
-2025-07-21 15:50:32,715 - main - INFO - [main.py:265] - ✅ 成功恢复 3 个任务状态
-2025-07-21 15:50:32,733 - main - INFO - [main.py:289] - 🧵 蜀锦蜀绣AI打样图生成工具启动
-2025-07-21 15:53:06,248 - main - INFO - [main.py:295] - 🛑 蜀锦蜀绣AI打样图生成工具关闭
-2025-07-21 15:53:09,766 - main - INFO - [main.py:128] - 目录已准备: uploads
-2025-07-21 15:53:09,766 - main - INFO - [main.py:128] - 目录已准备: outputs
-2025-07-21 15:53:09,767 - main - INFO - [main.py:134] - 系统初始化完成
-2025-07-21 15:53:09,767 - simple_professional_generator - INFO - [simple_professional_generator.py:31] - 极简专业织机生成器已初始化
-2025-07-21 15:53:09,767 - structural_professional_generator - INFO - [structural_professional_generator.py:34] - 🔧 结构化专业识别图生成器已初始化
-2025-07-21 15:53:09,767 - main - INFO - [main.py:227] - 🔄 正在从文件系统恢复任务状态...
-2025-07-21 15:53:09,768 - main - INFO - [main.py:265] - ✅ 成功恢复 3 个任务状态
-2025-07-21 15:53:09,784 - main - INFO - [main.py:289] - 🧵 蜀锦蜀绣AI打样图生成工具启动
-2025-07-21 15:55:40,452 - main - INFO - [main.py:295] - 🛑 蜀锦蜀绣AI打样图生成工具关闭
-2025-07-21 15:55:42,471 - main - INFO - [main.py:128] - 目录已准备: uploads
-2025-07-21 15:55:42,471 - main - INFO - [main.py:128] - 目录已准备: outputs
-2025-07-21 15:55:42,471 - main - INFO - [main.py:134] - 系统初始化完成
-2025-07-21 15:55:42,471 - simple_professional_generator - INFO - [simple_professional_generator.py:31] - 极简专业织机生成器已初始化
-2025-07-21 15:55:42,471 - structural_professional_generator - INFO - [structural_professional_generator.py:34] - 🔧 结构化专业识别图生成器已初始化
-2025-07-21 15:55:42,471 - main - INFO - [main.py:227] - 🔄 正在从文件系统恢复任务状态...
-2025-07-21 15:55:42,472 - main - INFO - [main.py:265] - ✅ 成功恢复 3 个任务状态
-2025-07-21 15:55:42,491 - main - INFO - [main.py:289] - 🧵 蜀锦蜀绣AI打样图生成工具启动
-2025-07-21 15:56:25,331 - main - INFO - [main.py:295] - 🛑 蜀锦蜀绣AI打样图生成工具关闭
-2025-07-21 15:56:27,952 - main - INFO - [main.py:128] - 目录已准备: uploads
-2025-07-21 15:56:27,952 - main - INFO - [main.py:128] - 目录已准备: outputs
-2025-07-21 15:56:27,953 - main - INFO - [main.py:134] - 系统初始化完成
-2025-07-21 15:56:27,953 - simple_professional_generator - INFO - [simple_professional_generator.py:31] - 极简专业织机生成器已初始化
-2025-07-21 15:56:27,953 - structural_professional_generator - INFO - [structural_professional_generator.py:34] - 🔧 结构化专业识别图生成器已初始化
-2025-07-21 15:56:27,953 - main - INFO - [main.py:227] - 🔄 正在从文件系统恢复任务状态...
-2025-07-21 15:56:27,954 - main - INFO - [main.py:265] - ✅ 成功恢复 3 个任务状态
-2025-07-21 15:56:27,971 - main - INFO - [main.py:289] - 🧵 蜀锦蜀绣AI打样图生成工具启动
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [59276] using WatchFiles
+/Users/wangkai/Documents/GitHub/zhijitu_shujinshuxiu/backend/venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:318: UserWarning: Valid config keys have changed in V2:
+* 'schema_extra' has been renamed to 'json_schema_extra'
+  warnings.warn(message, UserWarning)
+未找到AI API密钥，将使用增强传统方法
+通义千问API密钥未设置，请设置TONGYI_API_KEY环境变量
+2025-07-25 09:25:21,018 - main - INFO - [main.py:152] - 目录已准备: uploads
+2025-07-25 09:25:21,018 - main - INFO - [main.py:152] - 目录已准备: outputs
+2025-07-25 09:25:21,018 - main - INFO - [main.py:158] - 系统初始化完成
+2025-07-25 09:25:21,018 - structural_professional_generator - INFO - [structural_professional_generator.py:34] - 🔧 结构化专业识别图生成器已初始化
+2025-07-25 09:25:24,793 - ai_model_api - INFO - [ai_model_api.py:65] - AI模型加载成功，使用设备: cpu
+2025-07-25 09:25:24,847 - simple_ai_api - INFO - [simple_ai_api.py:99] - 简化AI模型加载成功，使用设备: cpu
+2025-07-25 09:25:24,847 - tongyi_qianwen_api - WARNING - [tongyi_qianwen_api.py:37] - 通义千问API密钥未设置，请设置TONGYI_API_KEY环境变量
+2025-07-25 09:25:24,847 - main - INFO - [main.py:274] - 🔄 正在从文件系统恢复任务状态...
+2025-07-25 09:25:24,847 - main - INFO - [main.py:312] - ✅ 成功恢复 1 个任务状态
+INFO:     Started server process [59279]
+INFO:     Waiting for application startup.
+2025-07-25 09:25:24,888 - main - INFO - [main.py:336] - 🧵 蜀锦蜀绣AI打样图生成工具启动
+INFO:     Application startup complete.
+使用设备: cpu
+生成器参数数量: 22297219
+判别器参数数量: 2766529
+生成器模型已加载: trained_models/generator_epoch_final.pth
+判别器模型已加载: trained_models/discriminator_epoch_final.pth
+INFO:     127.0.0.1:55117 - "GET /api/health HTTP/1.1" 200 OK

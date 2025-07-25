@@ -1,0 +1,212 @@
+{
+  "best_overall": {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "grabcut",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9734,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87729
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k3_seggrabcut_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_seggrabcut_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_seggrabcut_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_seggrabcut_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:02:28.424506"
+  },
+  "best_by_segmentation": {
+    "watershed": {
+      "params": {
+        "n_colors": 16,
+        "kernel": 3,
+        "segmentation_model": "watershed",
+        "feature_model": "opencv",
+        "style_transfer": true,
+        "feature_guided": true
+      },
+      "report": {
+        "像素差异率": 1.0,
+        "边界差异率": 0.9964,
+        "目标色彩数": 155782,
+        "生成色彩数": 3,
+        "像素总数": 377598,
+        "像素差异数": 377587,
+        "边界差异像素数": 84832
+      },
+      "keypoints_count": 0,
+      "result_img": "auto_tune_ai_results/result_n16_k3_segwatershed_featopencv_style1.png",
+      "diff_img": "auto_tune_ai_results/diff_n16_k3_segwatershed_featopencv_style1.png",
+      "color_table": "auto_tune_ai_results/color_table_n16_k3_segwatershed_featopencv_style1.csv",
+      "mask_img": "auto_tune_ai_results/mask_n16_k3_segwatershed_featopencv_style1.png",
+      "timestamp": "2025-07-22T10:03:33.270586"
+    },
+    "grabcut": {
+      "params": {
+        "n_colors": 16,
+        "kernel": 3,
+        "segmentation_model": "grabcut",
+        "feature_model": "opencv",
+        "style_transfer": true,
+        "feature_guided": true
+      },
+      "report": {
+        "像素差异率": 1.0,
+        "边界差异率": 0.9734,
+        "目标色彩数": 155782,
+        "生成色彩数": 7,
+        "像素总数": 377598,
+        "像素差异数": 377588,
+        "边界差异像素数": 87729
+      },
+      "keypoints_count": 0,
+      "result_img": "auto_tune_ai_results/result_n16_k3_seggrabcut_featopencv_style1.png",
+      "diff_img": "auto_tune_ai_results/diff_n16_k3_seggrabcut_featopencv_style1.png",
+      "color_table": "auto_tune_ai_results/color_table_n16_k3_seggrabcut_featopencv_style1.csv",
+      "mask_img": "auto_tune_ai_results/mask_n16_k3_seggrabcut_featopencv_style1.png",
+      "timestamp": "2025-07-22T10:02:28.424506"
+    },
+    "contour": {
+      "params": {
+        "n_colors": 16,
+        "kernel": 3,
+        "segmentation_model": "contour",
+        "feature_model": "opencv",
+        "style_transfer": true,
+        "feature_guided": true
+      },
+      "report": {
+        "像素差异率": 1.0,
+        "边界差异率": 0.9885,
+        "目标色彩数": 155782,
+        "生成色彩数": 2,
+        "像素总数": 377598,
+        "像素差异数": 377587,
+        "边界差异像素数": 85224
+      },
+      "keypoints_count": 0,
+      "result_img": "auto_tune_ai_results/result_n16_k3_segcontour_featopencv_style1.png",
+      "diff_img": "auto_tune_ai_results/diff_n16_k3_segcontour_featopencv_style1.png",
+      "color_table": "auto_tune_ai_results/color_table_n16_k3_segcontour_featopencv_style1.csv",
+      "mask_img": "auto_tune_ai_results/mask_n16_k3_segcontour_featopencv_style1.png",
+      "timestamp": "2025-07-22T10:05:05.307339"
+    },
+    "slic": {
+      "params": {
+        "n_colors": 16,
+        "kernel": 3,
+        "segmentation_model": "slic",
+        "feature_model": "opencv",
+        "style_transfer": true,
+        "feature_guided": true
+      },
+      "report": {
+        "像素差异率": 1.0,
+        "边界差异率": 0.9949,
+        "目标色彩数": 155782,
+        "生成色彩数": 6,
+        "像素总数": 377598,
+        "像素差异数": 377587,
+        "边界差异像素数": 85113
+      },
+      "keypoints_count": 0,
+      "result_img": "auto_tune_ai_results/result_n16_k3_segslic_featopencv_style1.png",
+      "diff_img": "auto_tune_ai_results/diff_n16_k3_segslic_featopencv_style1.png",
+      "color_table": "auto_tune_ai_results/color_table_n16_k3_segslic_featopencv_style1.csv",
+      "mask_img": "auto_tune_ai_results/mask_n16_k3_segslic_featopencv_style1.png",
+      "timestamp": "2025-07-22T10:04:16.821892"
+    }
+  },
+  "best_by_feature": {
+    "opencv": {
+      "params": {
+        "n_colors": 16,
+        "kernel": 3,
+        "segmentation_model": "grabcut",
+        "feature_model": "opencv",
+        "style_transfer": true,
+        "feature_guided": true
+      },
+      "report": {
+        "像素差异率": 1.0,
+        "边界差异率": 0.9734,
+        "目标色彩数": 155782,
+        "生成色彩数": 7,
+        "像素总数": 377598,
+        "像素差异数": 377588,
+        "边界差异像素数": 87729
+      },
+      "keypoints_count": 0,
+      "result_img": "auto_tune_ai_results/result_n16_k3_seggrabcut_featopencv_style1.png",
+      "diff_img": "auto_tune_ai_results/diff_n16_k3_seggrabcut_featopencv_style1.png",
+      "color_table": "auto_tune_ai_results/color_table_n16_k3_seggrabcut_featopencv_style1.csv",
+      "mask_img": "auto_tune_ai_results/mask_n16_k3_seggrabcut_featopencv_style1.png",
+      "timestamp": "2025-07-22T10:02:28.424506"
+    },
+    "blob": {
+      "params": {
+        "n_colors": 16,
+        "kernel": 3,
+        "segmentation_model": "grabcut",
+        "feature_model": "blob",
+        "style_transfer": true,
+        "feature_guided": true
+      },
+      "report": {
+        "像素差异率": 1.0,
+        "边界差异率": 0.9702,
+        "目标色彩数": 155782,
+        "生成色彩数": 7,
+        "像素总数": 377598,
+        "像素差异数": 377588,
+        "边界差异像素数": 87884
+      },
+      "keypoints_count": 6,
+      "result_img": "auto_tune_ai_results/result_n16_k3_seggrabcut_featblob_style1.png",
+      "diff_img": "auto_tune_ai_results/diff_n16_k3_seggrabcut_featblob_style1.png",
+      "color_table": "auto_tune_ai_results/color_table_n16_k3_seggrabcut_featblob_style1.csv",
+      "mask_img": "auto_tune_ai_results/mask_n16_k3_seggrabcut_featblob_style1.png",
+      "timestamp": "2025-07-22T10:03:16.501795"
+    },
+    "contour": {
+      "params": {
+        "n_colors": 16,
+        "kernel": 3,
+        "segmentation_model": "grabcut",
+        "feature_model": "contour",
+        "style_transfer": true,
+        "feature_guided": true
+      },
+      "report": {
+        "像素差异率": 1.0,
+        "边界差异率": 0.9689,
+        "目标色彩数": 155782,
+        "生成色彩数": 8,
+        "像素总数": 377598,
+        "像素差异数": 377588,
+        "边界差异像素数": 88018
+      },
+      "keypoints_count": 5,
+      "result_img": "auto_tune_ai_results/result_n16_k3_seggrabcut_featcontour_style1.png",
+      "diff_img": "auto_tune_ai_results/diff_n16_k3_seggrabcut_featcontour_style1.png",
+      "color_table": "auto_tune_ai_results/color_table_n16_k3_seggrabcut_featcontour_style1.csv",
+      "mask_img": "auto_tune_ai_results/mask_n16_k3_seggrabcut_featcontour_style1.png",
+      "timestamp": "2025-07-22T10:02:52.719739"
+    }
+  },
+  "statistics": {
+    "total_combinations": 108,
+    "avg_pixel_diff": 1.0,
+    "min_pixel_diff": 1.0,
+    "max_pixel_diff": 1.0
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "best_trial": {
+    "trial_id": 0,
+    "parameters": {
+      "color_clusters": 14,
+      "edge_smoothness": 2.4014286128198323,
+      "texture_detail_level": 0.9123957592679837,
+      "pattern_continuity_weight": 0.659195090518222,
+      "noise_reduction": 0.19361118426546192,
+      "contrast_enhancement": 1.009196164235342
+    },
+    "quality_score": 3.4136382776233885,
+    "processing_time": 1.0120749473571777
+  },
+  "all_trials": [
+    {
+      "trial_id": 0,
+      "parameters": {
+        "color_clusters": 14,
+        "edge_smoothness": 2.4014286128198323,
+        "texture_detail_level": 0.9123957592679837,
+        "pattern_continuity_weight": 0.659195090518222,
+        "noise_reduction": 0.19361118426546192,
+        "contrast_enhancement": 1.009196164235342
+      },
+      "quality_score": 3.4136382776233885,
+      "processing_time": 1.0120749473571777,
+      "timestamp": 1753240484.712519
+    }
+  ],
+  "optimization_history": [
+    {
+      "timestamp": 1753240484.71414,
+      "n_trials": 1,
+      "best_score": 3.4136382776233885,
+      "best_parameters": {
+        "color_clusters": 14,
+        "edge_smoothness": 2.4014286128198323,
+        "texture_detail_level": 0.9123957592679837,
+        "pattern_continuity_weight": 0.659195090518222,
+        "noise_reduction": 0.19361118426546192,
+        "contrast_enhancement": 1.009196164235342
+      },
+      "total_time": 1.0136990547180176
+    }
+  ],
+  "parameter_importance": {}
+}

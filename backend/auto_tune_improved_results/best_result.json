@@ -1,0 +1,22 @@
+{
+  "params": {
+    "n_colors": 16,
+    "kernel": 3,
+    "seg_model": "slic",
+    "feat_model": "opencv",
+    "style_transfer": true
+  },
+  "report": {
+    "像素差异率": 0.9999,
+    "边界差异率": 1.0,
+    "目标色彩数": 155782,
+    "生成色彩数": 12,
+    "像素总数": 377598,
+    "像素差异数": 377578,
+    "边界差异像素数": 84599
+  },
+  "result_img": "auto_tune_improved_results/result_n16_k3_segslic_featopencv_style1.png",
+  "diff_img": "auto_tune_improved_results/diff_n16_k3_segslic_featopencv_style1.png",
+  "color_table": "auto_tune_improved_results/color_table_n16_k3_segslic_featopencv_style1.csv",
+  "actual_colors": 13
+}

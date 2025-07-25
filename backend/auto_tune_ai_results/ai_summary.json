@@ -1,0 +1,2702 @@
+[
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "grabcut",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9734,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87729
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k3_seggrabcut_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_seggrabcut_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_seggrabcut_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_seggrabcut_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:02:28.424506"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "grabcut",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9689,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88018
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k3_seggrabcut_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_seggrabcut_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_seggrabcut_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_seggrabcut_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:02:52.719739"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "grabcut",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9702,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87884
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k3_seggrabcut_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_seggrabcut_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_seggrabcut_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_seggrabcut_featblob_style1.png",
+    "timestamp": "2025-07-22T10:03:16.501795"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "watershed",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9964,
+      "目标色彩数": 155782,
+      "生成色彩数": 3,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84832
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k3_segwatershed_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_segwatershed_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_segwatershed_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_segwatershed_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:03:33.270586"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "watershed",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9954,
+      "目标色彩数": 155782,
+      "生成色彩数": 6,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84861
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k3_segwatershed_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_segwatershed_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_segwatershed_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_segwatershed_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:03:46.589828"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "watershed",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9955,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84904
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k3_segwatershed_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_segwatershed_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_segwatershed_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_segwatershed_featblob_style1.png",
+    "timestamp": "2025-07-22T10:04:01.309922"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "slic",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9949,
+      "目标色彩数": 155782,
+      "生成色彩数": 6,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85113
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k3_segslic_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_segslic_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_segslic_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_segslic_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:04:16.821892"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "slic",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.995,
+      "目标色彩数": 155782,
+      "生成色彩数": 6,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85105
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k3_segslic_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_segslic_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_segslic_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_segslic_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:04:31.421165"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "slic",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9943,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85169
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k3_segslic_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_segslic_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_segslic_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_segslic_featblob_style1.png",
+    "timestamp": "2025-07-22T10:04:47.136729"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "contour",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9885,
+      "目标色彩数": 155782,
+      "生成色彩数": 2,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85224
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k3_segcontour_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_segcontour_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_segcontour_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_segcontour_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:05:05.307339"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "contour",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9995,
+      "目标色彩数": 155782,
+      "生成色彩数": 3,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84621
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k3_segcontour_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_segcontour_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_segcontour_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_segcontour_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:05:19.871548"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 3,
+      "segmentation_model": "contour",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9876,
+      "目标色彩数": 155782,
+      "生成色彩数": 4,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85294
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k3_segcontour_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k3_segcontour_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k3_segcontour_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k3_segcontour_featblob_style1.png",
+    "timestamp": "2025-07-22T10:05:35.620138"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "grabcut",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9727,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87800
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k5_seggrabcut_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_seggrabcut_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_seggrabcut_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_seggrabcut_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:06:00.330195"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "grabcut",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9649,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88357
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k5_seggrabcut_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_seggrabcut_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_seggrabcut_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_seggrabcut_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:06:27.241463"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "grabcut",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9698,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87982
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k5_seggrabcut_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_seggrabcut_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_seggrabcut_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_seggrabcut_featblob_style1.png",
+    "timestamp": "2025-07-22T10:06:51.617680"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "watershed",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9964,
+      "目标色彩数": 155782,
+      "生成色彩数": 3,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84821
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k5_segwatershed_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_segwatershed_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_segwatershed_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_segwatershed_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:07:08.450321"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "watershed",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9949,
+      "目标色彩数": 155782,
+      "生成色彩数": 6,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84910
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k5_segwatershed_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_segwatershed_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_segwatershed_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_segwatershed_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:07:20.163126"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "watershed",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9955,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84912
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k5_segwatershed_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_segwatershed_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_segwatershed_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_segwatershed_featblob_style1.png",
+    "timestamp": "2025-07-22T10:07:35.130436"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "slic",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9943,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85197
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k5_segslic_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_segslic_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_segslic_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_segslic_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:07:51.234077"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "slic",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9932,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85297
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k5_segslic_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_segslic_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_segslic_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_segslic_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:08:06.332428"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "slic",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9938,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85262
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k5_segslic_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_segslic_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_segslic_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_segslic_featblob_style1.png",
+    "timestamp": "2025-07-22T10:08:22.263307"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "contour",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9881,
+      "目标色彩数": 155782,
+      "生成色彩数": 2,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85235
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k5_segcontour_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_segcontour_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_segcontour_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_segcontour_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:08:39.842333"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "contour",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9995,
+      "目标色彩数": 155782,
+      "生成色彩数": 4,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84621
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k5_segcontour_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_segcontour_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_segcontour_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_segcontour_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:08:54.474682"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 5,
+      "segmentation_model": "contour",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9872,
+      "目标色彩数": 155782,
+      "生成色彩数": 4,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85309
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k5_segcontour_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k5_segcontour_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k5_segcontour_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k5_segcontour_featblob_style1.png",
+    "timestamp": "2025-07-22T10:09:10.152721"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "grabcut",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.973,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87932
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k7_seggrabcut_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_seggrabcut_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_seggrabcut_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_seggrabcut_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:09:36.663863"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "grabcut",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9626,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88607
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k7_seggrabcut_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_seggrabcut_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_seggrabcut_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_seggrabcut_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:09:59.414709"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "grabcut",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9697,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88186
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k7_seggrabcut_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_seggrabcut_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_seggrabcut_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_seggrabcut_featblob_style1.png",
+    "timestamp": "2025-07-22T10:10:24.942387"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "watershed",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9946,
+      "目标色彩数": 155782,
+      "生成色彩数": 3,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84941
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k7_segwatershed_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_segwatershed_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_segwatershed_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_segwatershed_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:10:41.516346"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "watershed",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9892,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85267
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k7_segwatershed_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_segwatershed_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_segwatershed_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_segwatershed_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:10:54.277735"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "watershed",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9935,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85056
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k7_segwatershed_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_segwatershed_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_segwatershed_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_segwatershed_featblob_style1.png",
+    "timestamp": "2025-07-22T10:11:08.624607"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "slic",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9927,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85283
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k7_segslic_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_segslic_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_segslic_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_segslic_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:11:25.096034"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "slic",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9915,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85422
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k7_segslic_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_segslic_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_segslic_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_segslic_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:11:39.659078"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "slic",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9917,
+      "目标色彩数": 155782,
+      "生成色彩数": 6,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85420
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k7_segslic_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_segslic_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_segslic_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_segslic_featblob_style1.png",
+    "timestamp": "2025-07-22T10:11:55.612727"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "contour",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9871,
+      "目标色彩数": 155782,
+      "生成色彩数": 3,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85284
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n16_k7_segcontour_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_segcontour_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_segcontour_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_segcontour_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:12:12.975655"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "contour",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9995,
+      "目标色彩数": 155782,
+      "生成色彩数": 4,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84633
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n16_k7_segcontour_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_segcontour_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_segcontour_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_segcontour_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:12:27.512742"
+  },
+  {
+    "params": {
+      "n_colors": 16,
+      "kernel": 7,
+      "segmentation_model": "contour",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9858,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85391
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n16_k7_segcontour_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n16_k7_segcontour_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n16_k7_segcontour_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n16_k7_segcontour_featblob_style1.png",
+    "timestamp": "2025-07-22T10:12:42.625158"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "grabcut",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9729,
+      "目标色彩数": 155782,
+      "生成色彩数": 9,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87742
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k3_seggrabcut_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_seggrabcut_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_seggrabcut_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_seggrabcut_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:13:10.260127"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "grabcut",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9677,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88099
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k3_seggrabcut_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_seggrabcut_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_seggrabcut_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_seggrabcut_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:13:34.329506"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "grabcut",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9714,
+      "目标色彩数": 155782,
+      "生成色彩数": 9,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87910
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k3_seggrabcut_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_seggrabcut_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_seggrabcut_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_seggrabcut_featblob_style1.png",
+    "timestamp": "2025-07-22T10:14:01.020411"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "watershed",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9964,
+      "目标色彩数": 155782,
+      "生成色彩数": 2,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84832
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k3_segwatershed_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_segwatershed_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_segwatershed_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_segwatershed_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:14:20.230000"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "watershed",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9956,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84836
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k3_segwatershed_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_segwatershed_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_segwatershed_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_segwatershed_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:14:35.195072"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "watershed",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9955,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84904
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k3_segwatershed_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_segwatershed_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_segwatershed_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_segwatershed_featblob_style1.png",
+    "timestamp": "2025-07-22T10:14:52.233470"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "slic",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.995,
+      "目标色彩数": 155782,
+      "生成色彩数": 4,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85080
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k3_segslic_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_segslic_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_segslic_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_segslic_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:15:10.810076"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "slic",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.995,
+      "目标色彩数": 155782,
+      "生成色彩数": 6,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85105
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k3_segslic_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_segslic_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_segslic_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_segslic_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:15:28.039725"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "slic",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9943,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85169
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k3_segslic_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_segslic_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_segslic_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_segslic_featblob_style1.png",
+    "timestamp": "2025-07-22T10:15:45.925353"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "contour",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9885,
+      "目标色彩数": 155782,
+      "生成色彩数": 2,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85224
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k3_segcontour_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_segcontour_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_segcontour_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_segcontour_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:16:06.445999"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "contour",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9995,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84621
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k3_segcontour_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_segcontour_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_segcontour_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_segcontour_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:16:23.346915"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 3,
+      "segmentation_model": "contour",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9872,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85320
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k3_segcontour_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k3_segcontour_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k3_segcontour_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k3_segcontour_featblob_style1.png",
+    "timestamp": "2025-07-22T10:16:41.114343"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "grabcut",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9755,
+      "目标色彩数": 155782,
+      "生成色彩数": 10,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87656
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k5_seggrabcut_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_seggrabcut_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_seggrabcut_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_seggrabcut_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:17:09.865178"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "grabcut",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9636,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88462
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k5_seggrabcut_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_seggrabcut_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_seggrabcut_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_seggrabcut_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:17:33.098263"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "grabcut",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9702,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87990
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k5_seggrabcut_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_seggrabcut_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_seggrabcut_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_seggrabcut_featblob_style1.png",
+    "timestamp": "2025-07-22T10:17:59.060054"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "watershed",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9964,
+      "目标色彩数": 155782,
+      "生成色彩数": 3,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84821
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k5_segwatershed_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_segwatershed_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_segwatershed_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_segwatershed_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:18:18.379534"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "watershed",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9947,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84922
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k5_segwatershed_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_segwatershed_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_segwatershed_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_segwatershed_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:18:33.085189"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "watershed",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9953,
+      "目标色彩数": 155782,
+      "生成色彩数": 6,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84912
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k5_segwatershed_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_segwatershed_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_segwatershed_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_segwatershed_featblob_style1.png",
+    "timestamp": "2025-07-22T10:18:49.868317"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "slic",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9943,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85197
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k5_segslic_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_segslic_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_segslic_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_segslic_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:19:08.267659"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "slic",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9935,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85298
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k5_segslic_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_segslic_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_segslic_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_segslic_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:19:24.829108"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "slic",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9938,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85262
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k5_segslic_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_segslic_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_segslic_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_segslic_featblob_style1.png",
+    "timestamp": "2025-07-22T10:19:43.029933"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "contour",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9881,
+      "目标色彩数": 155782,
+      "生成色彩数": 2,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85235
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k5_segcontour_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_segcontour_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_segcontour_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_segcontour_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:20:03.663605"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "contour",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9995,
+      "目标色彩数": 155782,
+      "生成色彩数": 4,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84621
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k5_segcontour_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_segcontour_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_segcontour_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_segcontour_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:20:20.797937"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 5,
+      "segmentation_model": "contour",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9867,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85332
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k5_segcontour_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k5_segcontour_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k5_segcontour_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k5_segcontour_featblob_style1.png",
+    "timestamp": "2025-07-22T10:20:38.560020"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "grabcut",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.973,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87942
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k7_seggrabcut_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_seggrabcut_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_seggrabcut_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_seggrabcut_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:21:05.554368"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "grabcut",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9629,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88451
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k7_seggrabcut_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_seggrabcut_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_seggrabcut_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_seggrabcut_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:21:31.377360"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "grabcut",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9697,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88245
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k7_seggrabcut_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_seggrabcut_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_seggrabcut_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_seggrabcut_featblob_style1.png",
+    "timestamp": "2025-07-22T10:21:57.966976"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "watershed",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9943,
+      "目标色彩数": 155782,
+      "生成色彩数": 4,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84959
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k7_segwatershed_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_segwatershed_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_segwatershed_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_segwatershed_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:22:16.834552"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "watershed",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9892,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85267
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k7_segwatershed_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_segwatershed_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_segwatershed_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_segwatershed_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:22:31.783471"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "watershed",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9935,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85056
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k7_segwatershed_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_segwatershed_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_segwatershed_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_segwatershed_featblob_style1.png",
+    "timestamp": "2025-07-22T10:22:48.411199"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "slic",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9927,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85283
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k7_segslic_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_segslic_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_segslic_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_segslic_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:23:06.825318"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "slic",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9915,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85422
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k7_segslic_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_segslic_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_segslic_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_segslic_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:23:24.077782"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "slic",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9919,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85386
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k7_segslic_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_segslic_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_segslic_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_segslic_featblob_style1.png",
+    "timestamp": "2025-07-22T10:23:41.909606"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "contour",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9875,
+      "目标色彩数": 155782,
+      "生成色彩数": 2,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85270
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n18_k7_segcontour_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_segcontour_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_segcontour_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_segcontour_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:24:02.627350"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "contour",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9995,
+      "目标色彩数": 155782,
+      "生成色彩数": 4,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84633
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n18_k7_segcontour_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_segcontour_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_segcontour_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_segcontour_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:24:19.361703"
+  },
+  {
+    "params": {
+      "n_colors": 18,
+      "kernel": 7,
+      "segmentation_model": "contour",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9858,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85391
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n18_k7_segcontour_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n18_k7_segcontour_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n18_k7_segcontour_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n18_k7_segcontour_featblob_style1.png",
+    "timestamp": "2025-07-22T10:24:37.467076"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "grabcut",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9735,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87737
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k3_seggrabcut_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_seggrabcut_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_seggrabcut_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_seggrabcut_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:25:06.178291"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "grabcut",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9673,
+      "目标色彩数": 155782,
+      "生成色彩数": 9,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88096
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k3_seggrabcut_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_seggrabcut_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_seggrabcut_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_seggrabcut_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:25:35.357878"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "grabcut",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.972,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87850
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k3_seggrabcut_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_seggrabcut_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_seggrabcut_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_seggrabcut_featblob_style1.png",
+    "timestamp": "2025-07-22T10:26:04.807778"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "watershed",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9964,
+      "目标色彩数": 155782,
+      "生成色彩数": 3,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84832
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k3_segwatershed_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_segwatershed_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_segwatershed_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_segwatershed_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:26:27.760925"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "watershed",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9957,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84832
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k3_segwatershed_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_segwatershed_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_segwatershed_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_segwatershed_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:26:45.709246"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "watershed",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9954,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84901
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k3_segwatershed_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_segwatershed_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_segwatershed_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_segwatershed_featblob_style1.png",
+    "timestamp": "2025-07-22T10:26:59.718859"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "slic",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9949,
+      "目标色彩数": 155782,
+      "生成色彩数": 6,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85114
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k3_segslic_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_segslic_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_segslic_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_segslic_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:27:14.660802"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "slic",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.995,
+      "目标色彩数": 155782,
+      "生成色彩数": 6,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85098
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k3_segslic_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_segslic_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_segslic_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_segslic_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:27:28.739175"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "slic",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9943,
+      "目标色彩数": 155782,
+      "生成色彩数": 6,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85176
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k3_segslic_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_segslic_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_segslic_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_segslic_featblob_style1.png",
+    "timestamp": "2025-07-22T10:27:43.311794"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "contour",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9885,
+      "目标色彩数": 155782,
+      "生成色彩数": 2,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85224
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k3_segcontour_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_segcontour_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_segcontour_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_segcontour_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:28:00.291655"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "contour",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9995,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84621
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k3_segcontour_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_segcontour_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_segcontour_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_segcontour_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:28:14.190154"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 3,
+      "segmentation_model": "contour",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9872,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85320
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k3_segcontour_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k3_segcontour_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k3_segcontour_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k3_segcontour_featblob_style1.png",
+    "timestamp": "2025-07-22T10:28:29.353179"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "grabcut",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9729,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87823
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k5_seggrabcut_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_seggrabcut_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_seggrabcut_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_seggrabcut_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:28:50.001149"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "grabcut",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9658,
+      "目标色彩数": 155782,
+      "生成色彩数": 10,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88332
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k5_seggrabcut_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_seggrabcut_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_seggrabcut_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_seggrabcut_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:29:12.563869"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "grabcut",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9698,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88048
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k5_seggrabcut_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_seggrabcut_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_seggrabcut_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_seggrabcut_featblob_style1.png",
+    "timestamp": "2025-07-22T10:29:37.904198"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "watershed",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9964,
+      "目标色彩数": 155782,
+      "生成色彩数": 3,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84821
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k5_segwatershed_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_segwatershed_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_segwatershed_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_segwatershed_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:30:00.989476"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "watershed",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9947,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84922
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k5_segwatershed_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_segwatershed_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_segwatershed_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_segwatershed_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:30:18.897810"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "watershed",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9955,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84912
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k5_segwatershed_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_segwatershed_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_segwatershed_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_segwatershed_featblob_style1.png",
+    "timestamp": "2025-07-22T10:30:39.051108"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "slic",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9943,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85197
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k5_segslic_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_segslic_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_segslic_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_segslic_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:31:01.369067"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "slic",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9932,
+      "目标色彩数": 155782,
+      "生成色彩数": 6,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85300
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k5_segslic_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_segslic_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_segslic_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_segslic_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:31:21.703829"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "slic",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9938,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85262
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k5_segslic_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_segslic_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_segslic_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_segslic_featblob_style1.png",
+    "timestamp": "2025-07-22T10:31:38.170170"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "contour",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9881,
+      "目标色彩数": 155782,
+      "生成色彩数": 2,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85235
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k5_segcontour_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_segcontour_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_segcontour_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_segcontour_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:31:56.405957"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "contour",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9995,
+      "目标色彩数": 155782,
+      "生成色彩数": 4,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84621
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k5_segcontour_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_segcontour_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_segcontour_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_segcontour_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:32:12.002445"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 5,
+      "segmentation_model": "contour",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9867,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85332
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k5_segcontour_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k5_segcontour_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k5_segcontour_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k5_segcontour_featblob_style1.png",
+    "timestamp": "2025-07-22T10:32:32.337706"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "grabcut",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9727,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 87896
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k7_seggrabcut_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_seggrabcut_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_seggrabcut_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_seggrabcut_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:32:57.294908"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "grabcut",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9628,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88580
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k7_seggrabcut_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_seggrabcut_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_seggrabcut_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_seggrabcut_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:33:17.601789"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "grabcut",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9671,
+      "目标色彩数": 155782,
+      "生成色彩数": 8,
+      "像素总数": 377598,
+      "像素差异数": 377588,
+      "边界差异像素数": 88192
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k7_seggrabcut_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_seggrabcut_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_seggrabcut_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_seggrabcut_featblob_style1.png",
+    "timestamp": "2025-07-22T10:33:36.690405"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "watershed",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9946,
+      "目标色彩数": 155782,
+      "生成色彩数": 3,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84941
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k7_segwatershed_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_segwatershed_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_segwatershed_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_segwatershed_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:33:52.457444"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "watershed",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9897,
+      "目标色彩数": 155782,
+      "生成色彩数": 9,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85242
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k7_segwatershed_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_segwatershed_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_segwatershed_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_segwatershed_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:34:04.677936"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "watershed",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9935,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85056
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k7_segwatershed_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_segwatershed_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_segwatershed_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_segwatershed_featblob_style1.png",
+    "timestamp": "2025-07-22T10:34:18.607278"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "slic",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9927,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85283
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k7_segslic_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_segslic_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_segslic_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_segslic_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:34:34.124855"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "slic",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9915,
+      "目标色彩数": 155782,
+      "生成色彩数": 7,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85422
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k7_segslic_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_segslic_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_segslic_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_segslic_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:34:48.082973"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "slic",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9919,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85386
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k7_segslic_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_segslic_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_segslic_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_segslic_featblob_style1.png",
+    "timestamp": "2025-07-22T10:35:03.241020"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "contour",
+      "feature_model": "opencv",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9875,
+      "目标色彩数": 155782,
+      "生成色彩数": 2,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85270
+    },
+    "keypoints_count": 0,
+    "result_img": "auto_tune_ai_results/result_n20_k7_segcontour_featopencv_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_segcontour_featopencv_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_segcontour_featopencv_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_segcontour_featopencv_style1.png",
+    "timestamp": "2025-07-22T10:35:20.077944"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "contour",
+      "feature_model": "contour",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9995,
+      "目标色彩数": 155782,
+      "生成色彩数": 5,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 84633
+    },
+    "keypoints_count": 5,
+    "result_img": "auto_tune_ai_results/result_n20_k7_segcontour_featcontour_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_segcontour_featcontour_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_segcontour_featcontour_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_segcontour_featcontour_style1.png",
+    "timestamp": "2025-07-22T10:35:33.970197"
+  },
+  {
+    "params": {
+      "n_colors": 20,
+      "kernel": 7,
+      "segmentation_model": "contour",
+      "feature_model": "blob",
+      "style_transfer": true,
+      "feature_guided": true
+    },
+    "report": {
+      "像素差异率": 1.0,
+      "边界差异率": 0.9864,
+      "目标色彩数": 155782,
+      "生成色彩数": 4,
+      "像素总数": 377598,
+      "像素差异数": 377587,
+      "边界差异像素数": 85373
+    },
+    "keypoints_count": 6,
+    "result_img": "auto_tune_ai_results/result_n20_k7_segcontour_featblob_style1.png",
+    "diff_img": "auto_tune_ai_results/diff_n20_k7_segcontour_featblob_style1.png",
+    "color_table": "auto_tune_ai_results/color_table_n20_k7_segcontour_featblob_style1.csv",
+    "mask_img": "auto_tune_ai_results/mask_n20_k7_segcontour_featblob_style1.png",
+    "timestamp": "2025-07-22T10:35:49.203555"
+  }
+]

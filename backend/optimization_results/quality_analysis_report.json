@@ -1,0 +1,55 @@
+{
+  "overall_score": 6.511925570378742,
+  "detailed_metrics": {
+    "color_accuracy": 0.6733481252036845,
+    "edge_quality": 1.1866817014947253,
+    "texture_detail": 0.3745138876221062,
+    "pattern_continuity": 29.598111177692143
+  },
+  "recommendations": [
+    "增加颜色数量以提高细节表现",
+    "增强纹理细节保留",
+    "提高纹理复杂度"
+  ],
+  "color_analysis": {
+    "score": 0.6733481252036845,
+    "histogram_similarity": 0.36297431660617924,
+    "color_accuracy": 0.9837219338011898,
+    "color_diff": 4.150906880696614,
+    "generated_colors": 41,
+    "reference_colors": 26001,
+    "color_efficiency": 0.0015768624283681396
+  },
+  "edge_analysis": {
+    "score": 1.1866817014947253,
+    "edge_density": 0.0033721923828125,
+    "reference_edge_density": 0.001949310302734375,
+    "edge_continuity": 1.0554298642533937,
+    "reference_continuity": 1.0528375733855186,
+    "edge_smoothness": 6.6303000166686505,
+    "reference_smoothness": 4.25290274760953,
+    "density_score": 0.9985771179199219,
+    "continuity_score": 1.00246219448603,
+    "smoothness_score": 1.559005792078224
+  },
+  "texture_analysis": {
+    "score": 0.3745138876221062,
+    "texture_complexity": 18.22899683700652,
+    "reference_complexity": 28.3910523945329,
+    "gradient_magnitude": 2.242945725672251,
+    "reference_gradient": 20.970066138375877,
+    "detail_retention": 0.10695940159995919,
+    "complexity_score": 0.6420683736442532,
+    "detail_score": 0.10695940159995919
+  },
+  "pattern_analysis": {
+    "score": 29.598111177692143,
+    "generated_regions": 1,
+    "reference_regions": 3,
+    "pattern_continuity": 0.7481698389458272,
+    "reference_continuity": 0.008510497387164234,
+    "area_similarity": 0.5495885736450097,
+    "region_score": 0.33333333333333337,
+    "continuity_score": 87.91141162609809
+  }
+}

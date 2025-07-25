@@ -236,6 +236,14 @@ health_check() {
 start_service() {
     log_info "🚀 启动FastAPI服务器..."
     
+    # 设置通义千问API密钥
+    if [ -n "$TONGYI_API_KEY" ]; then
+        export TONGYI_API_KEY="$TONGYI_API_KEY"
+        log_success "通义千问API密钥已设置"
+    else
+        log_warning "通义千问API密钥未设置"
+    fi
+    
     # 检查端口
     check_port 8000
     
@@ -252,7 +260,7 @@ start_service() {
     echo
     
     # 启动服务
-    exec uvicorn main:app \
+    exec env TONGYI_API_KEY="$TONGYI_API_KEY" uvicorn main:app \
         --reload \
         --host 0.0.0.0 \
         --port 8000 \

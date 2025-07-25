@@ -45,17 +45,17 @@ class ProfessionalWeavingGenerator:
         
         # AI增强织机识别配置 - 向专业软件靠近
         self.config = {
-            "color_connectivity_strength": 18,      # 增强连贯性
-            "edge_sharpening_intensity": 2.5,       # 增强边缘锐化
+            "color_connectivity_strength": 25,      # 增强连贯性
+            "edge_sharpening_intensity": 3.5,       # 极度增强边缘锐化
             "region_consolidation": True,
-            "decorative_border": True,              # 启用专业边框
-            "color_saturation_boost": 1.4,          # 增强饱和度
-            "contrast_boost": 1.3,                  # 增强对比度
-            "anti_aliasing": True,
-            "artistic_background": True,             # 启用AI艺术化背景
-            "complex_decoration": True,              # 启用专业装饰
-            "professional_enhancement": True,        # 启用专业级AI增强
-            "pure_weaving_mode": False,             # 专业模式
+            "decorative_border": False,             # 关闭装饰边框 - 数字化识别图模式
+            "color_saturation_boost": 2.5,          # 极度增强饱和度 - 真正识别图风格
+            "contrast_boost": 2.2,                  # 极度增强对比度 - 真正识别图风格
+            "anti_aliasing": False,                 # 关闭抗锯齿 - 保持像素化效果
+            "artistic_background": False,           # 关闭艺术化背景 - 数字化识别图模式
+            "complex_decoration": False,            # 关闭复杂装饰 - 数字化识别图模式
+            "professional_enhancement": False,      # 关闭专业艺术化处理 - 数字化识别图模式
+            "pure_weaving_mode": True,              # 启用纯织机模式 - 数字化识别图
         }
         
         logger.info("专业织机识别图像生成器已初始化")
@@ -79,6 +79,11 @@ class ProfessionalWeavingGenerator:
             
             # 专业织机处理流水线
             processed_image = self._professional_pipeline(original_image, color_count)
+            
+            # 数字化识别图模式 - 增强颜色饱和度和对比度
+            if self.config["pure_weaving_mode"]:
+                processed_image = self._apply_digital_recognition_style(processed_image)
+                logger.info("  ✓ 数字化识别图风格已应用")
             
             # 专业模式 - 添加装饰效果
             if self.config["decorative_border"] or self.config["complex_decoration"]:
@@ -984,36 +989,202 @@ class ProfessionalWeavingGenerator:
             return colors
     
     def _optimize_colors_extreme(self, colors: np.ndarray) -> np.ndarray:
-        """极度颜色优化 - 模拟专业织机识别软件效果"""
+        """极度优化颜色 - 真正识别图风格"""
         try:
-            optimized = []
+            # 极度增强饱和度
+            hsv = cv2.cvtColor(colors.reshape(1, -1, 3), cv2.COLOR_RGB2HSV)
+            hsv[:, :, 1] = np.clip(hsv[:, :, 1] * 2.5, 0, 255)  # 极度增强饱和度
+            enhanced_colors = cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB).reshape(-1, 3)
             
-            for color in colors:
-                # 转换为HSV进行极度调整
-                hsv = cv2.cvtColor(color.reshape(1, 1, 3), cv2.COLOR_RGB2HSV)[0, 0]
-                
-                # 极度增强饱和度（模拟专业软件的高饱和度）
-                hsv[1] = min(255, int(hsv[1] * 2.5))  # 2.5倍饱和度
-                
-                # 极度对比度调整（模拟专业软件的黑白分明效果）
-                if hsv[2] > 128:
-                    hsv[2] = min(255, int(hsv[2] * 1.3))  # 亮部更亮
+            # 极度增强对比度
+            enhanced_colors = np.clip(enhanced_colors * 2.2, 0, 255)
+            
+            # 极度色彩量化 - 确保纯色块效果
+            enhanced_colors = (enhanced_colors // 64) * 64  # 更激进的量化
+            
+            # 应用阈值处理 - 增强黑白对比
+            gray = cv2.cvtColor(enhanced_colors.reshape(1, -1, 3), cv2.COLOR_RGB2GRAY)
+            _, thresh = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY)
+            
+            # 将阈值结果应用到颜色通道
+            enhanced_colors = enhanced_colors.reshape(-1, 3)
+            for i in range(len(enhanced_colors)):
+                if thresh[0, i] > 128:
+                    enhanced_colors[i] = np.clip(enhanced_colors[i] * 1.2, 0, 255)  # 亮部更亮
                 else:
-                    hsv[2] = max(20, int(hsv[2] * 0.7))   # 暗部更暗，但保留一定可见度
-                
-                # 色相量化，减少色相变化（模拟专业软件的纯色效果）
-                hsv[0] = (hsv[0] // 20) * 20  # 色相量化到20度的倍数
-                
-                # 转换回RGB
-                rgb = cv2.cvtColor(hsv.reshape(1, 1, 3), cv2.COLOR_HSV2RGB)[0, 0]
-                
-                # 进一步RGB量化，确保纯色效果
-                rgb = (rgb // 32) * 32  # 量化到32的倍数
-                
-                optimized.append(rgb)
+                    enhanced_colors[i] = np.clip(enhanced_colors[i] * 0.8, 0, 255)  # 暗部更暗
             
-            return np.array(optimized, dtype=np.uint8)
+            return enhanced_colors.astype(np.uint8)
             
         except Exception as e:
             logger.warning(f"极度颜色优化失败: {str(e)}")
             return colors
+    
+    def _apply_digital_recognition_style(self, image: np.ndarray) -> np.ndarray:
+        """应用数字化识别图风格 - 专业识别图版本"""
+        try:
+            # 转换为PIL图像进行处理
+            pil_image = Image.fromarray(image)
+            
+            # 1. 极度增强饱和度
+            enhancer = ImageEnhance.Color(pil_image)
+            pil_image = enhancer.enhance(self.config["color_saturation_boost"])
+            
+            # 2. 极度增强对比度
+            enhancer = ImageEnhance.Contrast(pil_image)
+            pil_image = enhancer.enhance(self.config["contrast_boost"])
+            
+            # 转换回numpy数组进行专业处理
+            result = np.array(pil_image)
+            
+            # 3. 专业颜色聚类 - 减少到4-6种主要颜色
+            result = self._professional_color_clustering(result, n_colors=6)
+            
+            # 4. 图像分割和区域合并
+            result = self._image_segmentation_and_merging(result)
+            
+            # 5. 边缘检测和强化
+            result = self._edge_detection_and_enhancement(result)
+            
+            # 6. 最终颜色优化
+            result = self._final_color_optimization(result)
+            
+            return result.astype(np.uint8)
+            
+        except Exception as e:
+            logger.warning(f"数字化识别图风格应用失败: {str(e)}")
+            return image
+    
+    def _professional_color_clustering(self, image: np.ndarray, n_colors: int = 6) -> np.ndarray:
+        """专业颜色聚类 - 使用K-means聚类"""
+        try:
+            # 重塑图像为2D数组
+            pixels = image.reshape(-1, 3)
+            
+            # 使用K-means聚类
+            from sklearn.cluster import KMeans
+            kmeans = KMeans(n_clusters=n_colors, random_state=42, n_init=10)
+            labels = kmeans.fit_predict(pixels)
+            
+            # 获取聚类中心作为主要颜色
+            centers = kmeans.cluster_centers_.astype(np.uint8)
+            
+            # 将每个像素替换为最近的聚类中心
+            clustered_pixels = centers[labels]
+            
+            # 重塑回原始形状
+            result = clustered_pixels.reshape(image.shape)
+            
+            return result
+            
+        except Exception as e:
+            logger.warning(f"颜色聚类失败: {str(e)}")
+            return image
+    
+    def _image_segmentation_and_merging(self, image: np.ndarray) -> np.ndarray:
+        """图像分割和区域合并"""
+        try:
+            # 转换为灰度图进行分割
+            gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+            
+            # 使用分水岭算法进行图像分割
+            # 应用高斯模糊减少噪点
+            blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+            
+            # 使用Otsu's方法进行阈值分割
+            _, thresh = cv2.threshold(blurred, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+            
+            # 形态学操作清理分割结果
+            kernel = np.ones((3,3), np.uint8)
+            opening = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel, iterations=2)
+            
+            # 确定背景区域
+            sure_bg = cv2.dilate(opening, kernel, iterations=3)
+            
+            # 距离变换
+            dist_transform = cv2.distanceTransform(opening, cv2.DIST_L2, 5)
+            
+            # 确定前景区域
+            _, sure_fg = cv2.threshold(dist_transform, 0.7*dist_transform.max(), 255, 0)
+            sure_fg = np.uint8(sure_fg)
+            
+            # 找到未知区域
+            unknown = cv2.subtract(sure_bg, sure_fg)
+            
+            # 标记
+            _, markers = cv2.connectedComponents(sure_fg)
+            markers = markers + 1
+            markers[unknown == 255] = 0
+            
+            # 应用分水岭算法
+            markers = cv2.watershed(image, markers)
+            
+            # 根据分割结果重新着色
+            result = image.copy()
+            for i in range(2, markers.max() + 1):
+                mask = (markers == i)
+                if mask.sum() > 100:  # 只处理足够大的区域
+                    # 计算该区域的平均颜色
+                    region_colors = image[mask]
+                    avg_color = np.mean(region_colors, axis=0).astype(np.uint8)
+                    result[mask] = avg_color
+            
+            return result
+            
+        except Exception as e:
+            logger.warning(f"图像分割失败: {str(e)}")
+            return image
+    
+    def _edge_detection_and_enhancement(self, image: np.ndarray) -> np.ndarray:
+        """边缘检测和强化"""
+        try:
+            # 转换为灰度图
+            gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+            
+            # 使用Canny边缘检测
+            edges = cv2.Canny(gray, 50, 150)
+            
+            # 膨胀边缘
+            kernel = np.ones((2,2), np.uint8)
+            edges = cv2.dilate(edges, kernel, iterations=1)
+            
+            # 将边缘应用到原图
+            result = image.copy()
+            result[edges > 0] = [0, 0, 0]  # 边缘设为黑色
+            
+            # 应用形态学闭运算填充小孔
+            kernel = np.ones((3,3), np.uint8)
+            for i in range(3):
+                channel = result[:,:,i]
+                channel = cv2.morphologyEx(channel, cv2.MORPH_CLOSE, kernel)
+                result[:,:,i] = channel
+            
+            return result
+            
+        except Exception as e:
+            logger.warning(f"边缘检测失败: {str(e)}")
+            return image
+    
+    def _final_color_optimization(self, image: np.ndarray) -> np.ndarray:
+        """最终颜色优化"""
+        try:
+            # 转换为HSV进行最终调整
+            hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
+            
+            # 极度增强饱和度
+            hsv[:, :, 1] = np.clip(hsv[:, :, 1] * 3.0, 0, 255)
+            
+            # 增强对比度
+            hsv[:, :, 2] = np.clip(hsv[:, :, 2] * 1.5, 0, 255)
+            
+            # 转换回RGB
+            result = cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
+            
+            # 最终色彩量化 - 确保纯色效果
+            result = (result // 85) * 85  # 量化到85的倍数，确保纯色
+            
+            return result.astype(np.uint8)
+            
+        except Exception as e:
+            logger.warning(f"最终颜色优化失败: {str(e)}")
+            return image

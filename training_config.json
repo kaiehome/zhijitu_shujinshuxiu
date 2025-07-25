@@ -1,0 +1,14 @@
+{
+  "source_dir": "uploads",
+  "target_dir": "target_images",
+  "image_size": 256,
+  "batch_size": 8,
+  "validation_split": 0.2,
+  "augmentation": {
+    "horizontal_flip": true,
+    "vertical_flip": false,
+    "rotation": 10,
+    "brightness": 0.1,
+    "contrast": 0.1
+  }
+}

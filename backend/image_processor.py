@@ -1109,3 +1109,43 @@ class SichuanBrocadeProcessor:
                 "SVG矢量生成"
             ]
         } 
+
+    def smooth_boundary(self, mask: np.ndarray, kernel_size: int = 5) -> np.ndarray:
+        """边界平滑：高斯模糊+自适应阈值+形态学操作"""
+        blurred = cv2.GaussianBlur(mask, (kernel_size, kernel_size), 0)
+        _, thresh = cv2.threshold(blurred, 127, 255, cv2.THRESH_BINARY)
+        kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+        opened = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel)
+        closed = cv2.morphologyEx(opened, cv2.MORPH_CLOSE, kernel)
+        return closed
+
+    def superpixel_segment(self, image: np.ndarray, mask: np.ndarray = None, n_segments: int = 400) -> np.ndarray:
+        """超像素分割（SLIC）"""
+        try:
+            from skimage.segmentation import slic
+            from skimage.util import img_as_float
+            img_float = img_as_float(image)
+            segments = slic(img_float, n_segments=n_segments, mask=mask, start_label=1)
+            return segments.astype(np.int32)
+        except ImportError:
+            raise ImportError("请安装scikit-image以使用超像素分割功能")
+
+    def color_quantize(self, image: np.ndarray, n_colors: int = 20) -> Tuple[np.ndarray, List[Tuple[int, int, int]]]:
+        """色彩聚类（K-means），返回量化图像和色表"""
+        Z = image.reshape((-1, 3)).astype(np.float32)
+        criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 20, 1.0)
+        K = min(n_colors, len(Z))
+        _, labels, centers = cv2.kmeans(Z, K, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
+        centers = np.uint8(centers)
+        quantized = centers[labels.flatten()].reshape(image.shape)
+        color_table = [tuple(map(int, c)) for c in centers]
+        return quantized, color_table
+
+    def export_color_table(self, color_table: List[Tuple[int, int, int]], file_path: str = "color_table.csv"):
+        """导出色表为CSV文件"""
+        import csv
+        with open(file_path, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(['Index', 'R', 'G', 'B'])
+            for idx, (r, g, b) in enumerate(color_table):
+                writer.writerow([idx, r, g, b]) 
